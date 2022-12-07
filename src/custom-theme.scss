@@ -1,0 +1,44 @@
+@import "~@angular/material/theming";
+
+@include mat-core();
+
+//$color-primary: (
+//  50 : #fce8e7,
+//  100 : #f9c6c2,
+//  200 : #f5a19a,
+//  300 : #f07b72,
+//  400 : #ed5e53,
+//  500 : #ea4235,
+//  600 : #e73c30,
+//  700 : #e43328,
+//  800 : #e12b22,
+//  900 : #db1d16,
+//  A100 : #ffffff,
+//  A200 : #ffdad9,
+//  A400 : #ffa8a6,
+//  A700 : #ff908c,
+//  contrast: (
+//    50 : #000000,
+//    100 : #000000,
+//    200 : #000000,
+//    300 : #000000,
+//    400 : #000000,
+//    500 : #ffffff,
+//    600 : #ffffff,
+//    700 : #ffffff,
+//    800 : #ffffff,
+//    900 : #ffffff,
+//    A100 : #000000,
+//    A200 : #000000,
+//    A400 : #000000,
+//    A700 : #000000,
+//  )
+//);
+
+$default-theme-primary: mat-palette($mat-red, 900, 700, 800);
+
+$custom-theme: mat-ligth-theme(
+    $default-theme-primary
+);
+
+@include angular-material-theme($custom-theme)

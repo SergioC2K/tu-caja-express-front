@@ -1,0 +1,6 @@
+<div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="end end">
+  <app-button *ngIf="onExport" icon="download" title="Exportar" (click)="createAction.next($event)"></app-button>
+  <app-button *ngIf="onCreate" icon="add" title="Nuevo" (click)="createAction.next($event)"></app-button>
+  <app-button *ngIf="onEdit" icon="edit" title="Editar" (click)="editAction.next($event)"></app-button>
+  <app-button *ngIf="onDelete" icon="delete" title="Eliminar" (click)="onDeleteAction.next($event)"></app-button>
+</div>

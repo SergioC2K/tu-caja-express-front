@@ -1,0 +1,75 @@
+.login-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+}
+
+.login-container .is-admin {
+  background-image: url("src/assets/img/banners/interfaz-login-admin.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  display: flex inline;
+}
+
+.content-container {
+  flex: 1;
+}
+
+
+.banner-container {
+  height: 100%;
+  background-image: url("src/assets/img/banners/interfaz-login-clientes.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+.banner-container .is-admin {
+  background: none !important;
+}
+
+.card-container {
+  background-color: #eeeef0;
+  width: 350px;
+  height: auto;
+  padding: 50px;
+  border-radius: 30px !important;
+  -webkit-box-shadow: -1px 0px 29px -13px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 0px 29px -13px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 0px 29px -13px rgba(0, 0, 0, 0.75);
+}
+
+.card-container mat-card-content {
+  margin-top: 50px;
+}
+
+span {
+  font-size: 20px;
+}
+
+span a {
+  color: var(--main-red);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.sign-up-message:hover {
+  text-decoration: underline 3px var(--main-red);
+}
+
+.card-title {
+  font-size: 30px;
+  text-align: center;
+  color: #8d8c8c;
+  font-weight: bold;
+}
+
+
+.footer-link {
+  color: var(--main-red);
+  font-weight: 500;
+}

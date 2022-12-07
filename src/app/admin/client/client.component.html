@@ -1,0 +1,22 @@
+<div fxLayout="column" fxLayoutGap="10px">
+  <div fxLayout="row" fxLayoutGap="10px">
+    <div fxFlex fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="10px">
+      <app-input fxFlex="50" placeholder="Nombre"></app-input>
+      <app-button title="Buscar" icon="search"></app-button>
+    </div>
+    <app-button-actions fxFlex fxLayoutAlign="end end"
+                        [onCreate]="true" [onDelete]="true" [onExport]="true"
+                        (createAction)="createClient()"
+                        (onDeleteAction)="deleteClient()">
+    </app-button-actions>
+  </div>
+  <div class="table-container">
+    <app-client-table></app-client-table>
+  </div>
+  <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="end">
+    <app-button-actions fxLayoutAlign="end end" [onCreate]="true" [onDelete]="true" [onExport]="true"
+                        (createAction)="createClient()"
+                        (onDeleteAction)="deleteClient()">
+    </app-button-actions>
+  </div>
+</div>

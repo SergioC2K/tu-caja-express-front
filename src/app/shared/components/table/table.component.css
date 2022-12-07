@@ -1,0 +1,25 @@
+.ag-theme-alpine {
+  --ag-header-background-color: var(--main-red);
+  --ag-header-foreground-color: white;
+  --ag-secondary-foreground-color: white;
+  --ag-header-height: 20px;
+  font-size: 12px;
+}
+
+:host ::ng-deep .ag-row {
+  font-size: 12px;
+  height: 30px;
+}
+
+:host ::ng-deep .ag-header {
+  height: 30px !important;
+  min-height: 30px !important;
+}
+
+:host ::ng-deep .ag-header-row {
+  height: 30px !important;
+}
+
+.ag-cell {
+  line-height: 30px;
+}

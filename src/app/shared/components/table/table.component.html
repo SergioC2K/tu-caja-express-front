@@ -1,0 +1,12 @@
+<ag-grid-angular
+  style="width: 100%; height: 100%"
+  class="ag-theme-alpine"
+  [columnDefs]="columnDefs"
+  [defaultColDef]="defaultColumnDefs"
+  [rowData]="data"
+  [frameworkComponents]="frameworkComponents"
+  [rowSelection]="rowSelection"
+  [animateRows]="true"
+  (gridReady)="onGridReady($event)"
+  (cellClicked)="onCellClicked($event)"
+></ag-grid-angular>

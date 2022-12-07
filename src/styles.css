@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500,700");
+@import 'ag-grid-community/styles/ag-grid.css';
+@import 'ag-grid-community/styles/ag-theme-alpine.css';
+
+html {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat' !important;
+}
+
+
+:root {
+  --main-red: #ea4235;
+  --main-gray: #dde0e5;
+  --main-black: #1d1d1b;
+}
+
+.mat-dialog-container {
+  padding: 0 !important;
+}
+
+.dialog-form-container {
+  padding: 10px;
+}
+
+.dialog-form-subtitle {
+  padding: 10px 2px;
+}
+
+.table-container {
+  height: 400px !important;
+}
+
+

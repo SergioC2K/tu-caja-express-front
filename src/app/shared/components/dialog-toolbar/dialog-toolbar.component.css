@@ -1,0 +1,5 @@
+.dialog-toolbar {
+  background-color: var(--main-red);
+  color: white;
+  height: 45px;
+}

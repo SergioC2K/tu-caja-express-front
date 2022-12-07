@@ -1,0 +1,7 @@
+{
+  "/tucajaexpress-api/*": {
+    "target": "http://desarrollo-arte-in-network.com.co:8080/",
+    "logLevel": "debug",
+    "secure": false
+  }
+}

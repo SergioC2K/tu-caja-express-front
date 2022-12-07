@@ -1,0 +1,10 @@
+<mat-nav-list role="list" *ngFor="let item of menuList">
+  <mat-list-item role="listitem" fxLayout="row" fxLayoutGap="10px">
+    <div class="menu-item-icon">
+      <img src="assets/img/iconos_plataforma/{{item.icon}}.png" alt="{{item.icon}}">
+    </div>
+    <a [routerLink]="item.url" fxFlex class="menu-item-title" (click)="setCurrentRoute.next(item.url)">
+      {{item.title}}
+    </a>
+  </mat-list-item>
+</mat-nav-list>

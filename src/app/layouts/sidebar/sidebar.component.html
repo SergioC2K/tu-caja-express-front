@@ -1,0 +1,18 @@
+<mat-drawer-container>
+  <mat-drawer mode="side" opened="">
+    <app-sidebar-menu [menuList]="navigationList" (setCurrentRoute)="getRoute($event)"></app-sidebar-menu>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div class="main-toolbar">
+      <div class="main-icon">
+        <img src="assets/img/iconos_plataforma/{{toolbarImage}}.png" alt="toolbarImage">
+      </div>
+      <strong fxFlex class="menu-item-title">
+        {{toolbarTitle}}
+      </strong>
+    </div>
+    <div class="main-container">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

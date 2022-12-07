@@ -1,0 +1,180 @@
+<div fxLayout="column" class="main-container">
+  <nav fxFlex fxLayout="column" class="toolbar-container">
+    <div fxFlex>
+      <div class="contact-container" fxLayout="row" fxLayoutAlign="end" fxLayoutGap="10px">
+        <div fxLayout="row" fxLayoutGap="5px">
+          <mat-icon>phone</mat-icon>
+          <strong>
+            919-578-9105
+          </strong>
+        </div>
+        <div fxLayout="row" fxLayoutGap="5px">
+          <mat-icon>email</mat-icon>
+          <strong>
+            contacto@tucajaexpress.com
+          </strong>
+        </div>
+      </div>
+    </div>
+    <div class="toolbar-info" fxFlex fxLayout="row" fxLayoutAlign="space-around center">
+      <div class="toolbar-tab">
+        <span class="toolbar-tab-title">Inicio</span>
+      </div>
+      <div class="toolbar-tab">
+        <span class="toolbar-tab-title">Servicios</span>
+      </div>
+      <div class="toolbar-tab">
+        <span class="toolbar-tab-title">Cobertura</span>
+      </div>
+      <form class="toolbar-tab-image" fxLayout="column" fxLayoutAlign="center center">
+        <img class="toolbar-image" src="assets/img/logos/logo-tu-caja-express2.png" alt="Logo tu caja express">
+        <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+          <input class="tracking-guide-input" type="text" required autocomplete="off" placeholder="Sigue tu envío">
+          <div fxFlex fxLayoutAlign="end center">
+            <button mat-mini-fab class="search-button">
+              <mat-icon>search</mat-icon>
+            </button>
+          </div>
+        </div>
+      </form>
+      <div class="toolbar-tab">
+        <span class="toolbar-tab-title">Nosotros</span>
+      </div>
+      <div class="toolbar-tab">
+        <span class="toolbar-tab-title">Contactenos</span>
+      </div>
+
+      <div>
+        <button mat-raised-button [matMenuTriggerFor]="menu" class="sign-in-button">
+          <mat-icon>login</mat-icon>
+          ingresar
+        </button>
+        <mat-menu #menu="matMenu" class="menu-login-list">
+          <a routerLink="/admin-login" mat-menu-item>Plataforma admin</a>
+          <a routerLink="/login" mat-menu-item>Portal clientes</a>
+        </mat-menu>
+      </div>
+
+
+    </div>
+
+  </nav>
+
+  <div fxFlex>
+    <carousel cellWidth="100%" [height]="500" arrowsTheme="dark" class="carousel-item">
+      <div class="carousel-cell">
+        <img src="assets/img/banners/banner-email.png">
+      </div>
+      <div class="carousel-cell">
+        <img src="assets/img/banners/banner-email_03.png">
+      </div>
+      <div class="carousel-cell">
+        <img src="assets/img/banners/banner2.png">
+      </div>
+    </carousel>
+  </div>
+  <h1 class="subtitle" fxLayoutAlign="center center">Nuestros Servicios</h1>
+  <div class="services-container" fxFlex fxLayout="row" fxLayoutGap="30px" fxLayoutAlign="center center">
+    <mat-card fxFlex class="card-info">
+      <mat-card-content>
+        <img mat-card-image src="assets/img/logos/servicio1.png" alt="servicio1">
+        <span class="card-info-title">Puerta a puerta</span>
+        <p>Usted recibe nuestras cajas vacías y luego se las recogemos llenas sin costo adicional</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button class="button-card">
+          <span>Ver mas</span>
+          <mat-icon>keyboard_arrow_right</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card fxFlex class="card-info">
+      <mat-card-content>
+        <img mat-card-image src="assets/img/logos/servicio3.png" alt="servicio1">
+        <span class="card-info-title">Paquetería</span>
+        <p>Le ofrecemos un servicio de paquetería rápida y confiable</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button class="button-card">
+          <span>Ver mas</span>
+          <mat-icon>keyboard_arrow_right</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card fxFlex class="card-info">
+      <mat-card-content>
+        <img mat-card-image src="assets/img/logos/servicio2.png" alt="servicio1">
+        <span class="card-info-title">Nacional e internacional</span>
+        <p>Servicio especializado de mensajería nacional e internacional</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button class="button-card">
+          <span>Ver mas</span>
+          <mat-icon>keyboard_arrow_right</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+
+  </div>
+  <h1 class="subtitle" fxLayoutAlign="center center">Cobertura</h1>
+  <div fxFlex class="toppings-container" fxLayoutAlign="center center">
+    <img src="assets/img/banners/paises-coberturas_05.jpg" alt="Paises coberturas">
+  </div>
+  <div class="map-button map-button-container" fxLayout="row" fxLayoutAlign="center center">
+    <span>
+      Ampliar mapa
+    </span>
+    <mat-icon>keyboard_arrow_right</mat-icon>
+  </div>
+  <div class="call-info map-button-container">
+    <mat-icon>phone</mat-icon>
+    Llamenos para ubicarle nuestra oficina mas cercana.
+  </div>
+  <div class="parallax-info-container">
+    <img src="assets/img/banners/imagen-parallax-web.jpg" alt="imagen parallax">
+  </div>
+  <footer class="footer-container" fxLayout="column" fxLayoutGap="5px">
+    <div fxLayout="row" fxLayoutGap="120px">
+      <div class="contact-footer-container" fxLayout="column">
+        <img src="assets/img/logos/logo-tu-caja-express2.png" alt="logo tu caja express">
+        <span>Comunicate con nosotros</span>
+        <span class="contact-phone-footer-container"><mat-icon>headset_mic</mat-icon>919-578-9105</span>
+        <span>contacto@tucajaexpress.com</span>
+      </div>
+      <div fxLayout="column">
+        <span class="list-title">Coberturas</span>
+        <ul class="list-footer">
+          <li>Mexico</li>
+          <li>Guatemala</li>
+          <li>El Salvador</li>
+          <li>Honduras</li>
+          <li>Nicaragua</li>
+          <li>Costa rica</li>
+          <li>Colombia</li>
+        </ul>
+      </div>
+      <div fxLayout="column">
+        <span class="list-title">Nuestro servicios</span>
+        <ul class="list-footer">
+          <li>Puerta a puerta</li>
+          <li>Paquetería</li>
+          <li>Envios nacionales e internacionales</li>
+        </ul>
+      </div>
+
+      <div fxLayout="column">
+        <mat-icon></mat-icon>
+        <mat-icon></mat-icon>
+      </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+      <span>©Tu caja express</span>
+      <span>Politica de privacidad</span>
+      <span>|</span>
+      <span>Términos y condiciones</span>
+    </div>
+  </footer>
+</div>
+

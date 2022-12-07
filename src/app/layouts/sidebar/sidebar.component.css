@@ -1,0 +1,28 @@
+mat-sidenav {
+  width: 250px;
+}
+
+mat-drawer-container {
+  height: 100%;
+}
+
+.main-container {
+  padding: 30px;
+  height: calc(100vh - 80px);
+}
+
+.main-toolbar {
+  background-color: #ede6e6;
+  height: 57px;
+  padding: 10px;
+}
+
+.main-icon img {
+  width: 28px;
+}
+
+.menu-item-title {
+  font-size: 22px;
+  margin-left: 10px;
+  margin-top: 7px;
+}

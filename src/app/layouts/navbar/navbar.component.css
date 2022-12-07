@@ -1,0 +1,16 @@
+.navbar-container {
+  height: 80px;
+  background-color: white;
+}
+
+.navbar-image {
+  width: 20%;
+}
+
+.navbar-user-info {
+
+}
+
+.navbar-user-info mat-icon {
+  color: var(--main-gray);
+}
