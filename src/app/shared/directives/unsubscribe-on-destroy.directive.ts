@@ -10,7 +10,7 @@ export class UnsubscribeOnDestroyDirective implements OnDestroy {
 
   public subs = new SubSink();
 
-  constructor(public formBuilder: FormBuilder, public form: FormGroup) {
+  constructor(protected formBuilder: FormBuilder, public form: FormGroup) {
   }
 
   ngOnDestroy(): void {

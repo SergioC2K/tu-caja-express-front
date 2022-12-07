@@ -1,1 +1,39 @@
-<p>countries works!</p>
+<div fxLayout="column">
+  <mat-tab-group dynamicHeight>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <img class="tab-img" src="assets/img/iconos_plataforma/carpeta-vacia.png" alt="carpeta-vacia.png">
+        Activar/Desactivar Paises
+      </ng-template>
+      <ng-template matTabContent>
+        <div class="transport-tab-content">
+          <app-activate-countries></app-activate-countries>
+        </div>
+      </ng-template>
+    </mat-tab>
+
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <img class="tab-img" src="assets/img/iconos_plataforma/enviado.png" alt="enviado.png">
+        Transporte
+      </ng-template>
+      <ng-template matTabContent>
+        <div class="transport-tab-content">
+          <app-transportation></app-transportation>
+        </div>
+      </ng-template>
+    </mat-tab>
+
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <img class="tab-img" src="assets/img/iconos_plataforma/carpeta.png" alt="carpeta.png">
+        Editar Ciudad
+      </ng-template>
+      <ng-template matTabContent>
+        <div class="transport-tab-content">
+          <app-edit-city></app-edit-city>
+        </div>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+</div>

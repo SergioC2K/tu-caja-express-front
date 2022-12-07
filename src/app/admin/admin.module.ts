@@ -12,7 +12,6 @@ import {SalesComponent} from './sales';
 import {SurveysComponent} from './surveys';
 import {OfficeComponent} from './office';
 import {PackagesComponent} from './packages';
-import {CountriesComponent} from './countries';
 import {LockerComponent} from './locker';
 import {ServicesComponent} from './services';
 import {ClaimsComponent} from './claims';
@@ -26,8 +25,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MaterialModule} from '../material.module';
 import {AgencyDialogComponent, AgencyComponent} from './agency';
 import { ClientComponent } from './client';
-import { ClientDialogComponent } from './client/client-dialog/client-dialog.component';
-
+import { ClientDialogComponent } from "./client/client-dialog";
+import { CountriesModule } from "./countries";
 
 @NgModule({
   declarations: [
@@ -42,7 +41,6 @@ import { ClientDialogComponent } from './client/client-dialog/client-dialog.comp
     SurveysComponent,
     OfficeComponent,
     PackagesComponent,
-    CountriesComponent,
     LockerComponent,
     ServicesComponent,
     ClaimsComponent,
@@ -50,7 +48,7 @@ import { ClientDialogComponent } from './client/client-dialog/client-dialog.comp
     AgencyComponent,
     AgencyDialogComponent,
     ClientComponent,
-    ClientDialogComponent
+    ClientDialogComponent,
   ],
   imports: [
     CommonModule,
@@ -62,7 +60,8 @@ import { ClientDialogComponent } from './client/client-dialog/client-dialog.comp
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
-    ComponentsModule
+    ComponentsModule,
+    CountriesModule
   ]
 })
 export class AdminModule {

@@ -1,0 +1,17 @@
+:host ::ng-deep mat-card {
+  border-radius: 10px;
+}
+
+.card-button-action {
+  color: #ea4235;
+  font-size: 20px;
+}
+
+.tab-img {
+  width: 25px;
+  margin-right: 8px;
+}
+
+.transport-tab-content {
+  margin-top: 10px;
+}

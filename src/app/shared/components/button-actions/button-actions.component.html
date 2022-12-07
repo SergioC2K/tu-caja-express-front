@@ -2,5 +2,6 @@
   <app-button *ngIf="onExport" icon="download" title="Exportar" (click)="createAction.next($event)"></app-button>
   <app-button *ngIf="onCreate" icon="add" title="Nuevo" (click)="createAction.next($event)"></app-button>
   <app-button *ngIf="onEdit" icon="edit" title="Editar" (click)="editAction.next($event)"></app-button>
-  <app-button *ngIf="onDelete" icon="delete" title="Eliminar" (click)="onDeleteAction.next($event)"></app-button>
+  <app-button *ngIf="onDelete" icon="delete" title="Eliminar" (click)="deleteAction.next($event)"></app-button>
+  <app-button *ngIf="onSave" icon="save" title="Guardar" (click)="saveAction.next($event)"></app-button>
 </div>

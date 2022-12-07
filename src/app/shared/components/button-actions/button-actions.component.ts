@@ -1,14 +1,17 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 
 @Component({
-  selector: 'app-button-actions',
-  templateUrl: './button-actions.component.html',
-  styleUrls: ['./button-actions.component.css']
+  selector: "app-button-actions",
+  templateUrl: "./button-actions.component.html",
+  styleUrls: ["./button-actions.component.css"]
 })
 export class ButtonActionsComponent {
 
   @Input()
   public onEdit: boolean = false;
+
+  @Input()
+  public onSave: boolean = false;
 
   @Input()
   public onCreate: boolean = false;
@@ -26,7 +29,11 @@ export class ButtonActionsComponent {
   public editAction: EventEmitter<any> = new EventEmitter<any>();
 
   @Output()
-  public onDeleteAction: EventEmitter<any> = new EventEmitter<any>();
+  public deleteAction: EventEmitter<any> = new EventEmitter<any>();
+
+  @Output()
+  public saveAction: EventEmitter<any> = new EventEmitter<any>();
+
 
   constructor() {
   }
