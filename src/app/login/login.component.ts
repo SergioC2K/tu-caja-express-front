@@ -47,8 +47,18 @@ export class LoginComponent implements OnInit {
     this.form.markAllAsTouched();
     if (this.form.invalid) return;
     try {
+      this.form.disable();
+      this.loading = true;
       const response = await this.authService.loginUser(this.form.getRawValue()).toPromise();
+      if (response?.status === 200) {
+        this.authService.setToken(response.data.token);
+        await this.router.navigate(["/admin"]);
+      }
+      this.form.enable();
+      this.loading = false;
     } catch (e) {
+      this.form.enable();
+      this.loading = false;
       await this.sweetAlertService.showErrorMessage("Error en el servidor");
     }
 
@@ -59,9 +69,25 @@ export class LoginComponent implements OnInit {
     this.userForm.markAllAsTouched();
     if (this.userForm.invalid) return;
     try {
+      this.loading = true;
+      this.form.disable();
       const request: ICreateUserRequest = { ...this.userForm.getRawValue(), role: ["user"] };
       const response = await this.authService.createUser(request).toPromise();
+      if (response?.status === 201) {
+        const { isConfirmed } = await this.sweetAlertService.showSuccessMessage("Usuario creado con exito");
+        if (isConfirmed) {
+          this.form.patchValue({
+            username: response.data.email,
+            password: request.password
+          });
+          await this.onSubmit();
+          this.form.enable();
+          this.loading = false;
+        }
+      }
     } catch (e) {
+      this.form.enable();
+      this.loading = false;
       await this.sweetAlertService.showErrorMessage("Error en el servidor");
     }
   }

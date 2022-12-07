@@ -1,13 +1,8 @@
-import {IObjectData} from '../object-data.interface';
+import { IUserResponse } from "./user-response.interface";
 
 export interface ICreateUserResponse {
-  id: 0,
-  firstName: string,
-  lastName: string,
-  email: string,
-  password: string,
-  roles: IObjectData [],
-  locked: boolean,
-  enabled: boolean
+  status: number;
+  message: string;
+  data: IUserResponse;
 }
 
