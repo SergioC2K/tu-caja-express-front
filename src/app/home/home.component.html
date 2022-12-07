@@ -1,19 +1,17 @@
 <div fxLayout="column" class="main-container">
   <nav fxFlex fxLayout="column" class="toolbar-container">
-    <div fxFlex>
-      <div class="contact-container" fxLayout="row" fxLayoutAlign="end" fxLayoutGap="10px">
-        <div fxLayout="row" fxLayoutGap="5px">
-          <mat-icon>phone</mat-icon>
-          <strong>
-            919-578-9105
-          </strong>
-        </div>
-        <div fxLayout="row" fxLayoutGap="5px">
-          <mat-icon>email</mat-icon>
-          <strong>
-            contacto@tucajaexpress.com
-          </strong>
-        </div>
+    <div class="contact-container" fxLayout="row" fxLayoutAlign="end" fxLayoutGap="10px">
+      <div fxLayout="row" fxLayoutGap="5px">
+        <mat-icon>phone</mat-icon>
+        <strong>
+          919-578-9105
+        </strong>
+      </div>
+      <div fxLayout="row" fxLayoutGap="5px">
+        <mat-icon>email</mat-icon>
+        <strong>
+          contacto@tucajaexpress.com
+        </strong>
       </div>
     </div>
     <div class="toolbar-info" fxFlex fxLayout="row" fxLayoutAlign="space-around center">
@@ -49,7 +47,7 @@
           <mat-icon>login</mat-icon>
           ingresar
         </button>
-        <mat-menu #menu="matMenu" class="menu-login-list">
+        <mat-menu #menu="matMenu" class="menu-login-list" xPosition="after">
           <a routerLink="/admin-login" mat-menu-item>Plataforma admin</a>
           <a routerLink="/login" mat-menu-item>Portal clientes</a>
         </mat-menu>
@@ -57,7 +55,6 @@
 
 
     </div>
-
   </nav>
 
   <div fxFlex>

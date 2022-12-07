@@ -3,7 +3,8 @@
     <div *ngIf="!isAdmin" fxFlex="60" class="banner-container"></div>
     <div fxFlex="40" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px">
       <mat-card class="card-container">
-        <mat-card-title *ngIf="!onCreate" class="card-title">{{isAdmin ? 'Plataforma  administrativa' : 'Iniciar sesión'}}</mat-card-title>
+        <mat-card-title *ngIf="!onCreate"
+                        class="card-title">{{isAdmin ? 'Plataforma  administrativa' : 'Iniciar sesión'}}</mat-card-title>
         <mat-card-title *ngIf="onCreate" class="card-title">Registrarse</mat-card-title>
         <mat-card-content>
           <form *ngIf="!onCreate" [formGroup]="form" fxLayout="column" (ngSubmit)="onSubmit()">
@@ -32,8 +33,13 @@
 
         </mat-card-content>
       </mat-card>
-      <span *ngIf="!onCreate">Eres nuevo aquí? <a class="sign-up-message" (click)="setOnCreate()">Registrate!</a></span>
-      <span *ngIf="onCreate">Ya estas registrado <a class="sign-up-message" (click)="setOnCreate()">Ingresar!</a></span>
+      <ng-container *ngIf="!isAdmin">
+        <span *ngIf="!onCreate">Eres nuevo aquí? <a class="sign-up-message"
+                                                    (click)="setOnCreate()">Registrate!</a></span>
+        <span *ngIf="onCreate">Ya estas registrado <a class="sign-up-message"
+                                                      (click)="setOnCreate()">Ingresar!</a></span>
+      </ng-container>
+
     </div>
   </div>
 </div>
