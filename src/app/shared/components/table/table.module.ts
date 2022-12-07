@@ -10,6 +10,7 @@ import { ProgramTableComponent } from "./program-table";
 import { MaterialModule } from "../../../material.module";
 import { ClientTableComponent } from "./client-table";
 import { CountriesTableComponent } from "./countries-table";
+import { OfficeTableComponent } from "./office-table";
 
 const components: any[] | Type<any> = [
   TableComponent,
@@ -17,7 +18,8 @@ const components: any[] | Type<any> = [
   AgencyTableComponent,
   ProgramTableComponent,
   ClientTableComponent,
-  CountriesTableComponent
+  CountriesTableComponent,
+  OfficeTableComponent
 ];
 
 

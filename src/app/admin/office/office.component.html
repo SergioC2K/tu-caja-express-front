@@ -1,1 +1,7 @@
-<p>office works!</p>
+<div fxLayout="column" fxLayoutGap="10px">
+  <app-button-actions [onCreate]="true" (createAction)="saveOffice()"></app-button-actions>
+  <div class="table-container">
+    <app-office-table></app-office-table>
+  </div>
+  <app-button-actions [onCreate]="true" (createAction)="saveOffice()"></app-button-actions>
+</div>
