@@ -1,17 +1,30 @@
-import {Component, OnInit} from '@angular/core';
+import { Component } from "@angular/core";
+import { AuthService, SweetAlertService } from "../../shared";
+import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  selector: "app-navbar",
+  templateUrl: "./navbar.component.html",
+  styleUrls: ["./navbar.component.css"]
 })
-export class NavbarComponent implements OnInit {
-  user: string = 'Sergio';
+export class NavbarComponent {
+  user: string = "";
 
-  constructor() {
+  constructor(private authService: AuthService, private sweetAlertService: SweetAlertService, private router: Router) {
+    this.getUserName();
   }
 
-  ngOnInit(): void {
+  public async logout(): Promise<void> {
+    const { isConfirmed } = await this.sweetAlertService.showConfirmMessage("Desea cerrar sesión?");
+    if (isConfirmed) {
+      this.authService.deleteToken();
+      await this.router.navigate(["/home"]);
+    }
   }
+
+  private getUserName(): void {
+    this.user = this.authService.getUserInfo().firstName;
+  }
+
 
 }

@@ -6,3 +6,4 @@ export * from "./route-code.service";
 export * from "./routes.service";
 export * from "./status-manifest.service";
 export * from "./sweet-alert.service";
+export * from "./user.service";

@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { ICreateUserRequest, ICreateUserResponse, ILoginRequest, ILoginResponse } from "../models";
+import { ICreateUserRequest, ICreateUserResponse, ILoginRequest, ILoginResponse, IUserResponse } from "../models";
 import { Observable } from "rxjs";
 import { environment } from "../../../environments/environment";
 
@@ -9,7 +9,7 @@ import { environment } from "../../../environments/environment";
 })
 export class AuthService {
 
-  private apiUrl: string = `${environment.tuCajaExpressApi}/auth`;
+  private apiUrl: string = `tucajaexpress-api/auth`;
 
   constructor(private http: HttpClient) {
   }
@@ -26,7 +26,7 @@ export class AuthService {
     return "TU-CAJA-AUTH-TOKEN";
   }
 
-  public getUserInfo(): string {
+  public getUserInfoName(): string {
     return "TU-CAJA-AUTH-USER-INFO";
   }
 
@@ -34,8 +34,17 @@ export class AuthService {
     window.localStorage.setItem(this.getTokenName(), value);
   }
 
+  public deleteToken(): void {
+    window.localStorage.removeItem(this.getTokenName());
+  }
+
   public setUserInfo(value: any): void {
-    window.localStorage.setItem(this.getUserInfo(), value);
+    window.localStorage.setItem(this.getUserInfoName(), JSON.stringify(value));
+  }
+
+  public getUserInfo(): IUserResponse {
+    // @ts-ignore
+    return JSON.parse(window.localStorage.getItem(this.getUserInfoName()));
   }
 
 }

@@ -4,17 +4,18 @@
   </div>
   <div fxLayout="column">
     <h1 class="dialog-form-subtitle">Datos de la cuenta</h1>
-    <form fxLayout="column" fxLayoutGap="10px">
+    <form [formGroup]="form" fxLayout="column" fxLayoutGap="10px">
       <div fxLayout="row" fxLayoutGap="10px">
-        <app-input fxFlex placeholder="Correo electronico" type="email"></app-input>
-        <app-input fxFlex placeholder="Numero de telefono" type="number"></app-input>
+        <app-input formControlName="email" fxFlex placeholder="Correo electronico" type="email"></app-input>
+        <app-input formControlName="email" fxFlex placeholder="Numero de telefono" type="number"></app-input>
       </div>
       <div fxLayout="row" fxLayoutGap="10px">
-        <app-input fxFlex placeholder="Contraseña actual" type="password"></app-input>
-        <app-input fxFlex placeholder="Nueva contraseña" type="password"></app-input>
+        <app-input formControlName="password" fxFlex placeholder="Contraseña actual" type="password"></app-input>
+        <app-input formControlName="newPassword" fxFlex placeholder="Nueva contraseña" type="password"></app-input>
       </div>
       <div fxLayout="row" fxLayoutGap="10px">
-        <app-input fxFlex="50" placeholder="Confirmar contraseña" type="password"></app-input>
+        <app-input formControlName="repeatPassword" fxFlex="50" placeholder="Confirmar contraseña"
+                   type="password"></app-input>
       </div>
     </form>
     <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="end end">

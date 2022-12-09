@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { AuthService, ICreateUserRequest, SweetAlertService } from "../shared";
+import { AuthService, ICreateUserRequest, SweetAlertService, UserService } from "../shared";
 
 @Component({
   selector: "app-login",
@@ -20,7 +20,8 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private formBuilder: FormBuilder,
     private authService: AuthService,
-    private sweetAlertService: SweetAlertService) {
+    private sweetAlertService: SweetAlertService,
+    private userService: UserService) {
     this.form = this.formBuilder.group({
       email: [null, [Validators.required, Validators.email]],
       password: [null, [Validators.required]]
@@ -52,6 +53,8 @@ export class LoginComponent implements OnInit {
       const response = await this.authService.loginUser(this.form.getRawValue()).toPromise();
       if (response?.status === 200) {
         this.authService.setToken(response.data.token);
+        const userResponse = await this.userService.getUserInfo(response.data.id);
+        this.authService.setUserInfo(userResponse?.data);
         await this.router.navigate(["/admin"]);
       }
       this.form.enable();
@@ -59,9 +62,9 @@ export class LoginComponent implements OnInit {
     } catch (e) {
       this.form.enable();
       this.loading = false;
-      await this.sweetAlertService.showErrorMessage("Error en el servidor");
+      // @ts-ignore
+      await this.sweetAlertService.showErrorMessage(e.message);
     }
-
   }
 
 
@@ -88,7 +91,8 @@ export class LoginComponent implements OnInit {
     } catch (e) {
       this.form.enable();
       this.loading = false;
-      await this.sweetAlertService.showErrorMessage("Error en el servidor");
+      // @ts-ignore
+      await this.sweetAlertService.showErrorMessage(e.message);
     }
   }
 

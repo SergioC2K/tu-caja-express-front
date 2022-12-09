@@ -1,13 +1,13 @@
 <div fxLayout="column" fxLayoutGap="10px">
   <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="end">
     <app-button-actions fxLayoutAlign="end end" [onCreate]="true" [onDelete]="true" (createAction)="createAgency()"
-                        (onDeleteAction)="deleteAgencies()"></app-button-actions>
+                        (deleteAction)="deleteAgencies()"></app-button-actions>
   </div>
   <div class="table-container">
     <app-agency-table></app-agency-table>
   </div>
   <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="end">
     <app-button-actions fxLayoutAlign="end end" [onCreate]="true" [onDelete]="true" (createAction)="createAgency()"
-                        (onDeleteAction)="deleteAgencies()"></app-button-actions>
+                        (deleteAction)="deleteAgencies()"></app-button-actions>
   </div>
 </div>

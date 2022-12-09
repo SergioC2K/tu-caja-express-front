@@ -11,7 +11,6 @@ import {ComponentsModule} from './components';
   exports: [],
   imports: [
     CommonModule,
-    MaterialModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
