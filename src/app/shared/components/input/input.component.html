@@ -2,10 +2,12 @@
   <mat-label>{{placeholder}}</mat-label>
   <mat-icon *ngIf="icon" matPrefix>{{icon}}</mat-icon>
   <input matInput
+         [(ngModel)]="value"
          [placeholder]="placeholder"
          [type]="type"
          [readonly]="readonly"
          [disabled]="disabled"
+         (blur)="onBlur($event)"
          (input)="onInput($any($event.target).value)">
   <mat-error>Error</mat-error>
 </mat-form-field>

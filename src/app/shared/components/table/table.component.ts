@@ -1,12 +1,12 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {CellClickedEvent, ColDef, GridReadyEvent} from 'ag-grid-community';
+import { Component, Input } from "@angular/core";
+import { CellClickedEvent, ColDef, GridReadyEvent } from "ag-grid-community";
 
 @Component({
-  selector: 'app-table',
-  templateUrl: './table.component.html',
-  styleUrls: ['./table.component.css']
+  selector: "app-table",
+  templateUrl: "./table.component.html",
+  styleUrls: ["./table.component.css"]
 })
-export class TableComponent implements OnInit {
+export class TableComponent {
 
   public defaultColumnDefs: ColDef = {
     sortable: true,
@@ -24,16 +24,13 @@ export class TableComponent implements OnInit {
   public data: any[] = [];
 
   @Input()
-  public rowSelection: any = 'single';
+  public rowSelection: any = "single";
 
   @Input()
   frameworkComponents: any = {};
 
 
   constructor() {
-  }
-
-  ngOnInit(): void {
   }
 
   public onGridReady($event: GridReadyEvent<any>) {

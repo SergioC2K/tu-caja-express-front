@@ -1,8 +1,6 @@
-import { Component, forwardRef, Input } from "@angular/core";
-import { ControlValueAccessor, FormGroupDirective, NG_VALUE_ACCESSOR, NgControl, NgForm } from "@angular/forms";
-import { FormControl, Validators } from "@angular/forms";
-import { CustomErrorStateMatcher } from "./custom-error-state-matcher";
-import { ErrorStateMatcher } from "@angular/material/core";
+import { Component, forwardRef, Input, Self } from "@angular/core";
+import { ControlValueAccessor, NG_VALUE_ACCESSOR, NgControl, NgForm } from "@angular/forms";
+
 
 @Component({
   selector: "app-input",
@@ -18,18 +16,16 @@ import { ErrorStateMatcher } from "@angular/material/core";
 })
 export class InputComponent implements ControlValueAccessor {
 
-  counter: number = 0;
+  public value: any;
 
-  public value!: string;
-
-  public onChange = (_: any) => {
+  public onChange = (fn: any) => {
   };
-  public onTouch = () => {
+  public onTouched = () => {
   };
 
   onInput(value: string) {
     this.value = value;
-    this.onTouch();
+    this.onTouched();
     this.onChange(this.value);
   }
 
@@ -51,6 +47,9 @@ export class InputComponent implements ControlValueAccessor {
   @Input()
   public icon: string = "";
 
+  // constructor(@Self() public ngControl: NgControl) {
+  //   this.ngControl.valueAccessor = this;
+  // }
   constructor() {
   }
 
@@ -60,11 +59,7 @@ export class InputComponent implements ControlValueAccessor {
   // }
 
   writeValue(value: any): void {
-    if (value) {
-      this.value = value || "";
-    } else {
-      this.value = "";
-    }
+    this.value = value;
   }
 
   registerOnChange(fn: any): void {
@@ -72,7 +67,14 @@ export class InputComponent implements ControlValueAccessor {
   }
 
   registerOnTouched(fn: any): void {
-    this.onTouch = fn;
+    this.onTouched = fn;
   }
 
+  // setDisabledState(isDisabled: boolean) {
+  //   this.disabled = isDisabled;
+  // }
+
+  onBlur($event: FocusEvent) {
+    // console.log('onBlur control.errors: ', this.ngControl.control?.errors);
+  }
 }

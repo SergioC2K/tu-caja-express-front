@@ -1,21 +1,18 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-dialog-toolbar',
-  templateUrl: './dialog-toolbar.component.html',
-  styleUrls: ['./dialog-toolbar.component.css']
+  selector: "app-dialog-toolbar",
+  templateUrl: "./dialog-toolbar.component.html",
+  styleUrls: ["./dialog-toolbar.component.css"]
 })
-export class DialogToolbarComponent implements OnInit {
+export class DialogToolbarComponent {
   @Input()
-  public title: string = '';
+  public title: string = "";
 
   @Input()
-  public icon: string = '';
+  public icon: string = "";
 
   constructor() {
-  }
-
-  ngOnInit(): void {
   }
 
 }

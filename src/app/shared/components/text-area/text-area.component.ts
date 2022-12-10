@@ -1,6 +1,5 @@
 import { Component } from "@angular/core";
 import { InputComponent } from "../input";
-import { NgControl } from "@angular/forms";
 
 @Component({
   selector: "app-text-area",

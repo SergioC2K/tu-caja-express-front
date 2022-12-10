@@ -3,7 +3,7 @@ import {ICellRendererParams} from 'ag-grid-community';
 import {Component, ViewEncapsulation} from '@angular/core';
 
 @Component({
-  selector: 'table-button',
+  selector: 'app-table-button',
   template: `
     <button id="table-button" mat-raised-button>
       <mat-icon matTooltipClass="tooltip-icon" matTooltip="{{message}}"
