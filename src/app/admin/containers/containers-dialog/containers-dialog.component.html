@@ -1,1 +1,8 @@
-<p>containers-dialog works!</p>
+<div fxLayout="column" fxLayoutGap="10px">
+  <app-dialog-toolbar icon="add" title="Crear/Editar container"></app-dialog-toolbar>
+  <form [formGroup]="form" class="dialog-form-container" fxLayout="column">
+    <app-input formControlName="containerName" placeholder="Tipo"></app-input>
+    <app-input formControlName="shippingCompany" placeholder="Paises"></app-input>
+    <app-dialog-actions (saveAction)="createContainer()" (cancelAction)="closeDialog()"></app-dialog-actions>
+  </form>
+</div>

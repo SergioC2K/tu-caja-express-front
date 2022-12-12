@@ -96,6 +96,11 @@ export const AdminNavigationConstant = [
         url: "locker"
       },
       {
+        icon: "casilleros",
+        title: "Contenedor",
+        url: "container"
+      },
+      {
         icon: "servicio-al-cliente",
         title: "Servicios",
         url: "services"

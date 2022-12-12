@@ -1,92 +1,97 @@
-import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
-import {AdminProfileComponent} from './admin-profile';
-import {BoxesComponent} from './boxes';
-import {CellarsComponent} from './cellars';
-import {ClaimsComponent} from './claims';
-import {CountriesComponent} from './countries';
-import {LockerComponent} from './locker';
-import {NewGuideComponent} from './new-guide';
-import {OfficeComponent} from './office';
-import {PackagesComponent} from './packages';
-import {PrintRoutesComponent} from './print-routes';
-import {ProgramComponent} from './program';
-import {SalesComponent} from './sales';
-import {SearchGuideComponent} from './search-guide';
-import {ServicesComponent} from './services';
-import {SurveysComponent} from './surveys';
-import {AgencyComponent} from './agency';
-import {ClientComponent} from './client';
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
+import { AdminProfileComponent } from "./admin-profile";
+import { BoxesComponent } from "./boxes";
+import { CellarsComponent } from "./cellars";
+import { ClaimsComponent } from "./claims";
+import { CountriesComponent } from "./countries";
+import { LockerComponent } from "./locker";
+import { NewGuideComponent } from "./new-guide";
+import { OfficeComponent } from "./office";
+import { PackagesComponent } from "./packages";
+import { PrintRoutesComponent } from "./print-routes";
+import { ProgramComponent } from "./program";
+import { SalesComponent } from "./sales";
+import { SearchGuideComponent } from "./search-guide";
+import { ServicesComponent } from "./services";
+import { SurveysComponent } from "./surveys";
+import { AgencyComponent } from "./agency";
+import { ClientComponent } from "./client";
+import { ContainersComponent } from "./containers";
 
 const routes: Routes = [
   {
     component: AdminProfileComponent,
-    path: 'profile',
+    path: "profile"
   },
   {
     component: AgencyComponent,
-    path: 'agency',
+    path: "agency"
   },
   {
     component: BoxesComponent,
-    path: 'boxes',
+    path: "boxes"
   },
   {
     component: CellarsComponent,
-    path: 'cellars',
+    path: "cellars"
   },
   {
     component: ClaimsComponent,
-    path: 'claims',
+    path: "claims"
   },
   {
     component: CountriesComponent,
-    path: 'countries',
+    path: "countries"
   },
   {
     component: ClientComponent,
-    path: 'clients',
+    path: "clients"
   },
   {
     component: LockerComponent,
-    path: 'locker',
+    path: "locker"
   },
   {
     component: NewGuideComponent,
-    path: 'new-guide',
+    path: "new-guide"
   },
   {
     component: OfficeComponent,
-    path: 'offices',
+    path: "offices"
   },
   {
     component: PackagesComponent,
-    path: 'packages',
+    path: "packages"
   },
   {
     component: PrintRoutesComponent,
-    path: 'print-routes',
+    path: "print-routes"
   },
   {
     component: ProgramComponent,
-    path: 'program',
+    path: "program"
   },
   {
     component: SalesComponent,
-    path: 'sales',
+    path: "sales"
   },
   {
     component: SearchGuideComponent,
-    path: 'search-guide',
+    path: "search-guide"
   },
   {
     component: ServicesComponent,
-    path: 'services',
+    path: "services"
   },
   {
     component: SurveysComponent,
-    path: 'surveys',
+    path: "surveys"
   },
+  {
+    component: ContainersComponent,
+    path: "container"
+  }
 ];
 
 @NgModule({
