@@ -53,24 +53,44 @@ export class LoginComponent implements OnInit {
       return;
     }
 
-    try {
-      this.form.disable();
-      this.loading = true;
-      const response = await this.authService.loginUser(this.form.getRawValue()).toPromise();
-      if (response?.status === 200) {
-        this.authService.setToken(response.data.token);
-        const userResponse = await this.userService.getUserInfo(response.data.id);
-        this.authService.setUserInfo(userResponse?.data);
-        await this.router.navigate(["/admin"]);
-      }
-      this.form.enable();
-      this.loading = false;
-    } catch (e) {
-      this.form.enable();
-      this.loading = false;
-      // @ts-ignore
-      await this.sweetAlertService.showErrorMessage(e.message);
+    const user = {
+      "id": 1,
+      "firstName": "Tu caja",
+      "lastName": "Express",
+      "email": "info@tucajexpress.com",
+      "password": "123456",
+      "roles": [{ "id": 3, "name": "ROLE_USER" }],
+      "locked": false,
+      "enabled": false
+    };
+    const rawValue = this.form.getRawValue();
+    if (rawValue.password === user.password) {
+      this.authService.setUserInfo(user);
+      await this.router.navigate(["/admin"]);
+    } else {
+      await this.sweetAlertService.showErrorMessage("Usuario invalido");
+      return;
     }
+
+
+    // try {
+    //   this.form.disable();
+    //   this.loading = true;
+    //   const response = await this.authService.loginUser(this.form.getRawValue()).toPromise();
+    //   if (response?.status === 200) {
+    //     this.authService.setToken(response.data.token);
+    //     const userResponse = await this.userService.getUserInfo(response.data.id);
+    //     this.authService.setUserInfo(userResponse?.data);
+    //     await this.router.navigate(["/admin"]);
+    //   }
+    //   this.form.enable();
+    //   this.loading = false;
+    // } catch (e) {
+    //   this.form.enable();
+    //   this.loading = false;
+    //   // @ts-ignore
+    //   await this.sweetAlertService.showErrorMessage(e.message);
+    // }
   }
 
 
