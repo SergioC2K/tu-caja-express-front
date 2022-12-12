@@ -7,7 +7,7 @@
     <app-button-actions fxFlex fxLayoutAlign="end end"
                         [onCreate]="true" [onDelete]="true" [onExport]="true"
                         (createAction)="createClient()"
-                        (onDeleteAction)="deleteClient()">
+                        (deleteAction)="deleteClient()">
     </app-button-actions>
   </div>
   <div class="table-container">
@@ -16,7 +16,7 @@
   <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="end">
     <app-button-actions fxLayoutAlign="end end" [onCreate]="true" [onDelete]="true" [onExport]="true"
                         (createAction)="createClient()"
-                        (onDeleteAction)="deleteClient()">
+                        (deleteAction)="deleteClient()">
     </app-button-actions>
   </div>
 </div>

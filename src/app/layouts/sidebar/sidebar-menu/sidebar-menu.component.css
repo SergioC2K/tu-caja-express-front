@@ -1,19 +1,36 @@
 mat-nav-list {
   width: 230px;
-  background-color: var(--main-red);
+  background-color: rgba(234, 66, 53, 0.65);
 }
 
 mat-list-item {
   color: white !important;
-  font-size: 18px !important;
+  font-size: 15px !important;
   font-weight: 500;
   padding-left: 20px;
 }
 
 .menu-item-title {
   margin-left: 10px;
+  width: 100%;
 }
 
 .menu-item-icon img {
   width: 30px;
+}
+
+mat-expansion-panel {
+  background-color: var(--main-red);
+  border-radius: 0 !important;
+}
+
+mat-panel-title {
+  font-size: 18px !important;
+  color: white !important;
+  font-weight: 500;
+}
+
+
+.mat-expansion-indicator::after {
+  color: white !important;
 }

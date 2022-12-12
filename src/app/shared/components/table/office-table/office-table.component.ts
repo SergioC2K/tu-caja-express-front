@@ -20,7 +20,7 @@ export class OfficeTableComponent extends TableComponent {
 
   public override columnDefs: ColDef[] = [
     {
-      field: "oficina",
+      field: "officeName",
       headerName: "Oficina"
     },
     {

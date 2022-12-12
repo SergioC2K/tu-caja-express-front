@@ -34,8 +34,10 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
     this.validateRoute();
+    const res = await this.authService.getAlgo();
+    console.log(res);
   }
 
   private validateRoute() {
@@ -46,7 +48,11 @@ export class LoginComponent implements OnInit {
 
   public async onSubmit() {
     this.form.markAllAsTouched();
-    if (this.form.invalid) return;
+    if (this.form.invalid) {
+      await this.sweetAlertService.showErrorMessage("Campos obligatorios");
+      return;
+    }
+
     try {
       this.form.disable();
       this.loading = true;

@@ -1,7 +1,7 @@
 <div fxLayout="column" fxLayoutGap="10px">
-  <app-button-actions [onCreate]="true" (createAction)="saveOffice()"></app-button-actions>
+  <app-button-actions [onCreate]="true" (createAction)="createOffice()"></app-button-actions>
   <div class="table-container">
-    <app-office-table></app-office-table>
+    <app-office-table [data]="officeList"></app-office-table>
   </div>
-  <app-button-actions [onCreate]="true" (createAction)="saveOffice()"></app-button-actions>
+  <app-button-actions [onCreate]="true" (createAction)="createOffice()"></app-button-actions>
 </div>

@@ -1,0 +1,9 @@
+<div fxLayout="column" fxLayoutGap="10px">
+  <app-dialog-toolbar icon="person_add" title="Crear/Editar oficina"></app-dialog-toolbar>
+  <form [formGroup]="form" class="dialog-form-container" fxLayout="column">
+    <app-input fxFlex formControlName="officeName" placeholder="Oficina"></app-input>
+    <app-input fxFlex formControlName="leadAgency" placeholder="Agencia principal"></app-input>
+    <app-input fxFlex formControlName="routes" placeholder="Rutas"></app-input>
+    <app-dialog-actions (saveAction)="saveOffice()" (cancelAction)="closeDialog()"></app-dialog-actions>
+  </form>
+</div>
