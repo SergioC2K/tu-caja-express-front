@@ -36,8 +36,6 @@ export class LoginComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     this.validateRoute();
-    const res = await this.authService.getAlgo();
-    console.log(res);
   }
 
   private validateRoute() {
