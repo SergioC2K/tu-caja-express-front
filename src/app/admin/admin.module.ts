@@ -8,9 +8,10 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MaterialModule } from "../material.module";
 import { CountriesModule } from "./countries";
 import { AdminProfileModule } from "./admin-profile";
-import { AgencyModule } from "./agency/agency.module";
-import { ClientModule } from "./client/client.module";
+import { AgencyModule } from "./agency";
+import { ClientModule } from "./client";
 import { ProgramModule } from "./program";
+import { OfficeModule } from "./office";
 
 @NgModule({
   declarations: [],
@@ -27,7 +28,8 @@ import { ProgramModule } from "./program";
     AdminProfileModule,
     AgencyModule,
     ClientModule,
-    ProgramModule
+    ProgramModule,
+    OfficeModule
   ]
 })
 export class AdminModule {
