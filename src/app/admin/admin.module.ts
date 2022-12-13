@@ -12,6 +12,7 @@ import { AgencyModule } from "./agency";
 import { ClientModule } from "./client";
 import { ProgramModule } from "./program";
 import { OfficeModule } from "./office";
+import { SearchGuideModule } from "./search-guide/search-guide.module";
 
 @NgModule({
   declarations: [],
@@ -29,7 +30,8 @@ import { OfficeModule } from "./office";
     AgencyModule,
     ClientModule,
     ProgramModule,
-    OfficeModule
+    OfficeModule,
+    SearchGuideModule
   ]
 })
 export class AdminModule {

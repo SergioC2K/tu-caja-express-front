@@ -1,1 +1,62 @@
-<p>search-guide works!</p>
+<div fxLayout="column" fxLayoutGap="10px">
+  <mat-accordion class="example-headers-align">
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Guías cotización
+        </mat-panel-title>
+        <mat-panel-description>
+          Ingrese los datos para consultar
+          <mat-icon>assignment</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <form [formGroup]="form" fxLayout="column" fxLayoutGap="10px">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px" fxLayoutGap.xs="10px">
+          <app-filterable-select formControlName="agencia" fxFlex placeholder="Agencia"></app-filterable-select>
+          <app-input formControlName="ciudad" fxFlex placeholder="Ciudad"></app-input>
+          <app-input formControlName="guiaDesde" fxFlex placeholder="Guía desde"></app-input>
+          <app-input formControlName="guiaHasta" fxFlex placeholder="Guía hasta"></app-input>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px" fxLayoutGap.xs="10px">
+          <app-input formControlName="numeroGuia" fxFlex placeholder="Numero guia"></app-input>
+          <app-input formControlName="referencia" fxFlex placeholder="Referencia"></app-input>
+          <app-input formControlName="referencia2" fxFlex placeholder="Referencia #2"></app-input>
+          <app-filterable-select formControlName="proceso" fxFlex placeholder="Proceso"></app-filterable-select>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px" fxLayoutGap.xs="10px">
+          <app-input formControlName="numeroMovimiento" fxFlex placeholder="Numero movimiento"></app-input>
+          <app-filterable-select formControlName="paisDestino" fxFlex
+                                 placeholder="País destino"></app-filterable-select>
+          <app-input formControlName="estadoDestino" fxFlex placeholder="Estado destino"></app-input>
+          <app-filterable-select formControlName="CiudadDestino" fxFlex
+                                 placeholder="Ciudad destino"></app-filterable-select>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px" fxLayoutGap.xs="10px">
+          <app-input formControlName="PesoDesde" fxFlex placeholder="Peso desde"></app-input>
+          <app-input formControlName="PesoHasta" fxFlex placeholder="Peso hasta"></app-input>
+          <app-filterable-select formControlName="pago" fxFlex placeholder="Pago"></app-filterable-select>
+          <app-filterable-select formControlName="orden" fxFlex placeholder="Orden"></app-filterable-select>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px" fxLayoutGap.xs="10px">
+          <app-input formControlName="nombreRemitente" fxFlex placeholder="Nombre remitente"></app-input>
+          <app-input formControlName="telefono" fxFlex type="number" placeholder="Telefono"></app-input>
+          <app-input formControlName="nombreDestinatario" fxFlex placeholder="Nombre destinatario"></app-input>
+          <app-input formControlName="telefonoDestinatario" type="number" fxFlex
+                     placeholder="Telefono destinatario"></app-input>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px" fxLayoutGap.xs="10px">
+          <app-input formControlName="valor" fxFlex type="number" placeholder="Valor"></app-input>
+          <app-input formControlName="fechaInicial" fxFlex placeholder="Fecha inicial"></app-input>
+          <app-filterable-select formControlName="fechaFinal" fxFlex placeholder="Fecha final"></app-filterable-select>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="end end">
+          <app-button title="Buscar" icon="search"></app-button>
+        </div>
+      </form>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <div class="table-container">
+    <app-search-guide-table></app-search-guide-table>
+  </div>
+</div>

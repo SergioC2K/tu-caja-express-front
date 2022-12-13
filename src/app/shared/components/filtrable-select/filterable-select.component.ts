@@ -1,5 +1,5 @@
 import { Component, Input } from "@angular/core";
-import { ControlValueAccessor } from "@angular/forms";
+import { ControlValueAccessor, NgControl } from "@angular/forms";
 
 @Component({
   selector: "app-filterable-select",
@@ -16,7 +16,13 @@ export class FilterableSelectComponent implements ControlValueAccessor {
   };
   public options: string[] = [];
 
-  constructor() {
+  onInput(value: string) {
+    this.value = value;
+    this.onTouched();
+    this.onChange(this.value);
+  }
+  constructor(public ngControl: NgControl) {
+    this.ngControl.valueAccessor = this;
   }
 
   @Input()

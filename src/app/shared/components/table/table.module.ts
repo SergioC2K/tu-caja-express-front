@@ -12,6 +12,7 @@ import { ClientTableComponent } from "./client-table";
 import { CountriesTableComponent } from "./countries-table";
 import { OfficeTableComponent } from "./office-table";
 import { ContainerTableComponent } from "./container-table";
+import { SearchGuideTableComponent } from "./search-guide-table";
 
 const components: any[] | Type<any> = [
   TableComponent,
@@ -21,12 +22,13 @@ const components: any[] | Type<any> = [
   ClientTableComponent,
   CountriesTableComponent,
   OfficeTableComponent,
-  ContainerTableComponent
+  ContainerTableComponent,
+  SearchGuideTableComponent
 ];
 
 
 @NgModule({
-  declarations: [...components],
+  declarations: [...components,],
   exports: [...components],
   imports: [
     CommonModule,
