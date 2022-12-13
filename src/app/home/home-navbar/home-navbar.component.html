@@ -1,0 +1,55 @@
+<nav fxFlex fxLayout="column" class="toolbar-container">
+  <div class="contact-container" fxLayout="row" fxLayoutAlign="end" fxLayoutGap="10px">
+    <div fxLayout="row" fxLayoutGap="5px">
+      <mat-icon>phone</mat-icon>
+      <strong>
+        919-578-9105
+      </strong>
+    </div>
+    <div fxLayout="row" fxLayoutGap="5px">
+      <mat-icon>email</mat-icon>
+      <strong>
+        contacto@tucajaexpress.com
+      </strong>
+    </div>
+  </div>
+  <div class="toolbar-info" fxFlex fxLayout="row" fxLayoutAlign="space-around center">
+    <div class="toolbar-tab">
+      <a [routerLink]="['/home/beginning']" class="toolbar-tab-title">Inicio</a>
+    </div>
+    <div class="toolbar-tab">
+      <a [routerLink]="['/home/services']" class="toolbar-tab-title">Servicios</a>
+    </div>
+    <div class="toolbar-tab">
+      <a [routerLink]="['/home/coverage']" class="toolbar-tab-title">Cobertura</a>
+    </div>
+    <form class="toolbar-tab-image" fxLayout="column" fxLayoutAlign="center center">
+      <img class="toolbar-image" src="assets/img/logos/logo-tu-caja-express2.png" alt="Logo tu caja express">
+      <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+        <input class="tracking-guide-input" type="text" required autocomplete="off" placeholder="Sigue tu envío">
+        <div fxFlex fxLayoutAlign="end center">
+          <button mat-mini-fab class="search-button">
+            <mat-icon>search</mat-icon>
+          </button>
+        </div>
+      </div>
+    </form>
+    <div class="toolbar-tab">
+      <a [routerLink]="['/home/us']" class="toolbar-tab-title">Nosotros</a>
+    </div>
+    <div class="toolbar-tab">
+      <a [routerLink]="['/home/contact']" class="toolbar-tab-title">Contactenos</a>
+    </div>
+
+    <div>
+      <button mat-raised-button [matMenuTriggerFor]="menu" class="sign-in-button">
+        <mat-icon>login</mat-icon>
+        ingresar
+      </button>
+      <mat-menu #menu="matMenu" class="menu-login-list" xPosition="after">
+        <a routerLink="/admin-login" mat-menu-item>Plataforma admin</a>
+        <a routerLink="/login" mat-menu-item>Portal clientes</a>
+      </mat-menu>
+    </div>
+  </div>
+</nav>

@@ -6,11 +6,6 @@ import { Component } from "@angular/core";
   styleUrls: ["./home.component.css"]
 })
 export class HomeComponent {
-  images = [
-    { path: "" },
-    { path: "" },
-    { path: "" }
-  ];
 
   constructor() {
   }

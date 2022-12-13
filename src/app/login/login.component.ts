@@ -24,13 +24,13 @@ export class LoginComponent implements OnInit {
     private userService: UserService) {
     this.form = this.formBuilder.group({
       email: [null, [Validators.required, Validators.email]],
-      password: [null, [Validators.required]]
+      password: [null, [Validators.required, Validators.minLength(6)]]
     });
     this.userForm = this.formBuilder.group({
-      firstName: [null, [Validators.required]],
-      lastName: [null, [Validators.required]],
+      firstName: [null, [Validators.required, Validators.maxLength(30)]],
+      lastName: [null, [Validators.required, Validators.maxLength(30)]],
       email: [null, [Validators.required, Validators.email]],
-      password: [null, [Validators.required]]
+      password: [null, [Validators.required, Validators.minLength(6), Validators.maxLength(30)]]
     });
   }
 
