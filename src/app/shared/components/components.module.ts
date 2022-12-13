@@ -10,6 +10,7 @@ import { ButtonActionsModule } from "./button-actions";
 import { DatePickerModule } from "./date-picker";
 import { DialogActionsModule } from "./dialog-actions";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { FilterableSelectModule } from "./filtrable-select";
 
 
 const allModules = [
@@ -27,12 +28,14 @@ const allModules = [
   TextAreaModule,
   ButtonActionsModule,
   DatePickerModule,
-  DialogActionsModule
+  DialogActionsModule,
+  FilterableSelectModule
 ];
 
 @NgModule({
   exports: [...allModules],
-  imports: [...allModules]
+  imports: [...allModules],
+  declarations: []
 })
 export class ComponentsModule {
 }
