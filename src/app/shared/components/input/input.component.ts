@@ -1,20 +1,16 @@
-import { Component, forwardRef, Input, Self } from "@angular/core";
-import { ControlValueAccessor, NG_VALUE_ACCESSOR, NgControl, NgForm } from "@angular/forms";
+import { Component, Input } from "@angular/core";
+import { ControlValueAccessor, NgControl, ValidationErrors } from "@angular/forms";
+import { ErrorStateMatcher } from "@angular/material/core";
+import { CustomErrorStateMatcher } from "./custom-error-state-matcher";
 
 
 @Component({
   selector: "app-input",
   templateUrl: "./input.component.html",
-  styleUrls: ["./input.component.css"],
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => InputComponent),
-      multi: true
-    }
-  ]
+  styleUrls: ["./input.component.css"]
 })
 export class InputComponent implements ControlValueAccessor {
+
 
   public value: any;
 
@@ -50,13 +46,22 @@ export class InputComponent implements ControlValueAccessor {
   // constructor(@Self() public ngControl: NgControl) {
   //   this.ngControl.valueAccessor = this;
   // }
-  constructor() {
+  constructor(public ngControl: NgControl) {
+    this.ngControl.valueAccessor = this;
   }
 
+  public errorStateMatcher: ErrorStateMatcher = new CustomErrorStateMatcher(this.ngControl);
 
-  // public getErrorMessage(): string {
-  //   return this.control.hasError("required") ? "Campo obligatorio" : "";
-  // }
+  public getErrorMessage(): string | null {
+    let errorMessage: string | null = null;
+    if (this.ngControl.hasError("required")) {
+      errorMessage = "El campo es obligatorio";
+    }
+    if (this.ngControl.hasError("email")) {
+      errorMessage = "El email no es valido";
+    }
+    return errorMessage;
+  }
 
   writeValue(value: any): void {
     this.value = value;

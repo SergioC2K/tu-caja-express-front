@@ -6,9 +6,10 @@
          [placeholder]="placeholder"
          [type]="type"
          [readonly]="readonly"
+         [errorStateMatcher]="errorStateMatcher"
          [disabled]="disabled"
          (blur)="onBlur($event)"
          (input)="onInput($any($event.target).value)">
-  <mat-error>Error</mat-error>
+  <mat-error *ngIf="getErrorMessage">{{getErrorMessage()}}</mat-error>
 </mat-form-field>
 
