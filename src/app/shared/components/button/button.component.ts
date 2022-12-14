@@ -19,6 +19,9 @@ export class ButtonComponent {
   @Input()
   public loading: boolean = false;
 
+  @Input()
+  public type: string = "button";
+
   constructor() {
   }
 

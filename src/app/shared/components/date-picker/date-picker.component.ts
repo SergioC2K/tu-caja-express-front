@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 import { InputComponent } from "../input";
 
 @Component({
@@ -7,6 +7,5 @@ import { InputComponent } from "../input";
   styleUrls: ["./date-picker.component.css"]
 })
 export class DatePickerComponent extends InputComponent {
-
 
 }

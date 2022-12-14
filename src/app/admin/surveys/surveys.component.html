@@ -1,1 +1,12 @@
-<p>surveys works!</p>
+<div fxLayout="column" fxLayoutGap="10px">
+  <form [formGroup]="form" fxLayout="row" fxLayoutGap="10px">
+    <app-filterable-select formControlName="usuario" fxFlex placeholder="Usuario"></app-filterable-select>
+    <app-date-picker formControlName="fechaDesde" fxFlex placeholder="Fecha desde"></app-date-picker>
+    <app-date-picker formControlName="fechaHasta" fxFlex placeholder="Fecha hasta"></app-date-picker>
+    <app-filterable-select formControlName="encuesta" fxFlex placeholder="Encuesta"></app-filterable-select>
+    <app-button class="mt-2" title="Buscar" icon="search"></app-button>
+  </form>
+  <div class="table-container">
+    <app-surveys-table></app-surveys-table>
+  </div>
+</div>

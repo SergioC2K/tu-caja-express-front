@@ -10,7 +10,6 @@ import { environment } from "../../../environments/environment";
 export class UserService {
 
   private apiUrl: string = `${environment.tuCajaExpressApi}/user`;
-  // private apiUrl: string = `tucajaexpress-api/user`;
 
   constructor(private http: HttpClient) {
   }

@@ -13,6 +13,10 @@ import { ClientModule } from "./client";
 import { ProgramModule } from "./program";
 import { OfficeModule } from "./office";
 import { SearchGuideModule } from "./search-guide/search-guide.module";
+import { SalesModule } from "./sales/sales.module";
+import { ServicesModule } from "./services/services.module";
+import { PrintRoutesModule } from "./print-routes";
+import { SurveysModule } from "./surveys/surveys.module";
 
 @NgModule({
   declarations: [],
@@ -31,6 +35,11 @@ import { SearchGuideModule } from "./search-guide/search-guide.module";
     ClientModule,
     ProgramModule,
     OfficeModule,
+    SearchGuideModule,
+    SalesModule,
+    ServicesModule,
+    PrintRoutesModule,
+    SurveysModule,
     SearchGuideModule
   ]
 })

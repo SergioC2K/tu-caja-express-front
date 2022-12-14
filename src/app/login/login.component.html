@@ -10,7 +10,7 @@
           <form *ngIf="!onCreate" [formGroup]="form" fxLayout="column" (ngSubmit)="onSubmit()">
             <app-input formControlName="email" icon="person" placeholder="Usuario" type="email"></app-input>
             <app-input formControlName="password" icon="lock" placeholder="Contraseña" type="password"></app-input>
-            <div class="card-content-footer" fxLayout="column">
+            <div class="card-content-footer" fxLayout="column" fxLayoutGap="10px">
               <div fxLayout="row" fxLayoutGap="70px">
                 <mat-checkbox>Recordarme</mat-checkbox>
                 <a class="footer-link" fxflex fxLayoutAlign="end end">Olvidaste tu contraseña?</a>

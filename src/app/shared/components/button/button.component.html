@@ -1,4 +1,4 @@
-<button *ngIf="buttonType==='raised'" mat-raised-button color="warn">
+<button [type]="type"  *ngIf="buttonType==='raised'" mat-raised-button color="warn">
   <mat-icon *ngIf="loading">
     <mat-spinner diameter="20" color="primary"></mat-spinner>
   </mat-icon>

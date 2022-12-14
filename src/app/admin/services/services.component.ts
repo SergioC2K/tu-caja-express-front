@@ -1,13 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { FormBuilder } from "@angular/forms";
+import { UnsubscribeOnDestroyDirective } from "../../shared";
 
 @Component({
-  selector: 'app-services',
-  templateUrl: './services.component.html',
-  styleUrls: ['./services.component.css']
+  selector: "app-services",
+  templateUrl: "./services.component.html",
+  styleUrls: ["./services.component.css"]
 })
-export class ServicesComponent implements OnInit {
+export class ServicesComponent extends UnsubscribeOnDestroyDirective implements OnInit {
 
-  constructor() { }
+  constructor(formBuilder: FormBuilder) {
+    super(formBuilder, formBuilder.group({
+      nombre: [null],
+      numeroGuia: [null],
+    }));
+  }
 
   ngOnInit(): void {
   }

@@ -1,0 +1,47 @@
+<div fxLayout="column" fxLayoutGap="10px">
+  <mat-accordion class="example-headers-align">
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Imprimir informes
+        </mat-panel-title>
+        <mat-panel-description>
+          Ingrese los datos para consultar
+          <mat-icon>assignment</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <form [formGroup]="form" fxLayout="column" fxLayoutGap="10px">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px" fxLayoutGap.xs="10px">
+          <app-filterable-select fxFlex formControlName="tipoInforme"
+                                 placeholder="Tipo informe"></app-filterable-select>
+          <app-filterable-select fxFlex formControlName="agencia" placeholder="Agencia"></app-filterable-select>
+          <app-filterable-select fxFlex formControlName="usuario" placeholder="Usuario"></app-filterable-select>
+          <app-filterable-select fxFlex formControlName="tipoCaja" placeholder="Tipo caja"></app-filterable-select>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px" fxLayoutGap.xs="10px">
+          <app-filterable-select fxFlex formControlName="tipoEnvio" placeholder="Tipo envio"></app-filterable-select>
+          <app-filterable-select fxFlex formControlName="pais" placeholder="Pais"></app-filterable-select>
+          <app-filterable-select fxFlex formControlName="tipoPago" placeholder="Tipo pago"></app-filterable-select>
+          <app-filterable-select fxFlex formControlName="imprimir" placeholder="Imprimir"></app-filterable-select>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px" fxLayoutGap.xs="10px">
+          <app-filterable-select fxFlex formControlName="orden" placeholder="Orden"></app-filterable-select>
+          <app-filterable-select fxFlex formControlName="ruta" placeholder="Ruta"></app-filterable-select>
+          <app-input fxFlex formControlName="libraMin" placeholder="Libra min" type="number"></app-input>
+        </div>
+        <mat-panel-title>
+          Filtros
+        </mat-panel-title>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px" fxLayoutGap.xs="10px">
+          <app-date-picker fxFlex formControlName="fechaInicio" placeholder="Fecha Inicio"></app-date-picker>
+          <app-date-picker fxFlex formControlName="fechaFinal" placeholder="Fecha Final"></app-date-picker>
+          <app-filterable-select fxFlex formControlName="alertaInicio" placeholder="Alerta inicio"></app-filterable-select>
+          <app-filterable-select fxFlex formControlName="alertaFinal" placeholder="Alerta final"></app-filterable-select>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="end end">
+          <app-button title="Buscar" icon="search"></app-button>
+        </div>
+      </form>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

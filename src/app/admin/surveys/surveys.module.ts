@@ -1,15 +1,15 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { ComponentsModule } from "../../shared";
-import { ServicesComponent } from "./services.component";
+import { SurveysComponent } from "./surveys.component";
 
 
 @NgModule({
-  declarations: [ServicesComponent],
+  declarations: [SurveysComponent],
   imports: [
     CommonModule,
     ComponentsModule
   ]
 })
-export class ServicesModule {
+export class SurveysModule {
 }

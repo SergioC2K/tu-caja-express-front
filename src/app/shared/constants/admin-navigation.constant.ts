@@ -27,9 +27,9 @@ export const AdminNavigationConstant = [
         url: "search-guide"
       },
       {
-        icon: "lupa",
+        icon: "impresora",
         title: "Imprimir informes",
-        url: "search-guide"
+        url: "print-report"
       },
       {
         icon: "usuario",
@@ -96,7 +96,7 @@ export const AdminNavigationConstant = [
         url: "locker"
       },
       {
-        icon: "casilleros",
+        icon: "container",
         title: "Contenedor",
         url: "container"
       },

@@ -14,6 +14,10 @@ export class AuthService {
   constructor(private http: HttpClient) {
   }
 
+  getAlgo(): any {
+    return this.http.get('https://jsonplaceholder.typicode.com/todos/1').toPromise();
+  }
+
   public loginUser(request: ILoginRequest): Observable<ILoginResponse> {
     return this.http.post<ILoginResponse>(`${this.apiUrl}/loginUser`, request);
   }

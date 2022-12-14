@@ -1,52 +1,52 @@
-<div fxLayout="column" fxLayoutGap="10px">
+<div fxLayout="column">
   <app-dialog-toolbar icon="add" title="Nuevo programa"></app-dialog-toolbar>
   <form class="dialog-form-container" [formGroup]="form" fxLayout="column">
     <mat-tab-group>
       <mat-tab label="Cliente">
         <div fxFlex fxLayout="column">
           <div fxLayout="row" fxLayoutGap="10px">
-            <app-input fxFlex placeholder="Telefono"></app-input>
-            <app-input fxFlex placeholder="Movil"></app-input>
+            <app-input formControlName="telefono" fxFlex placeholder="Telefono"></app-input>
+            <app-input formControlName="movil" fxFlex placeholder="Movil"></app-input>
           </div>
           <div fxLayout="row" fxLayoutGap="10px">
-            <app-input fxFlex placeholder="Nombre"></app-input>
-            <app-input fxFlex placeholder="Dirección"></app-input>
+            <app-input formControlName="nombre" fxFlex placeholder="Nombre"></app-input>
+            <app-input formControlName="direccion" fxFlex placeholder="Dirección"></app-input>
           </div>
           <div fxLayout="row" fxLayoutGap="10px">
-            <app-input fxFlex placeholder="Ciudad"></app-input>
-            <app-input fxFlex placeholder="Barrio"></app-input>
+            <app-input formControlName="ciudad" fxFlex placeholder="Ciudad"></app-input>
+            <app-input formControlName="barrio" fxFlex placeholder="Barrio"></app-input>
           </div>
           <div fxLayout="row" fxLayoutGap="10px">
-            <app-input fxFlex placeholder="Email"></app-input>
-            <app-input fxFlex placeholder="Zip"></app-input>
+            <app-input formControlName="email" fxFlex placeholder="Email"></app-input>
+            <app-input formControlName="zip" fxFlex placeholder="Zip"></app-input>
           </div>
         </div>
       </mat-tab>
       <mat-tab label="Programación">
         <div fxFlex fxLayout="column">
           <div fxFlex fxLayout="row">
-            <app-input fxFlex placeholder="Fecha recolecta"></app-input>
+            <app-input formControlName="fechaRecolecta" fxFlex placeholder="Fecha recolecta"></app-input>
           </div>
           <div fxFlex fxLayout="row" fxLayoutGap="10px">
-            <app-input fxFlex placeholder="No paquetes"></app-input>
-            <app-input fxFlex placeholder="¿Iguales?"></app-input>
+            <app-input formControlName="npaquetes" fxFlex placeholder="No paquetes"></app-input>
+            <app-input formControlName="iguales" fxFlex placeholder="¿Iguales?"></app-input>
           </div>
           <div fxFlex fxLayout="row" fxLayoutGap="10px">
-            <app-input fxFlex placeholder="Contenido"></app-input>
-            <app-input fxFlex placeholder="declarado"></app-input>
+            <app-input formControlName="contenido" fxFlex placeholder="Contenido"></app-input>
+            <app-input formControlName="declarado" fxFlex placeholder="declarado"></app-input>
           </div>
           <div fxLayout="row" fxLayoutGap="10px">
-            <app-input fxFlex placeholder="Peso"></app-input>
-            <app-input fxFlex placeholder="Alto"></app-input>
+            <app-input formControlName="peso" fxFlex placeholder="Peso"></app-input>
+            <app-input formControlName="alto" fxFlex placeholder="Alto"></app-input>
           </div>
 
           <div fxLayout="row" fxLayoutGap="10px">
-            <app-input fxFlex placeholder="Ancho"></app-input>
-            <app-input fxFlex placeholder="Largo"></app-input>
+            <app-input formControlName="ancho" fxFlex placeholder="Ancho"></app-input>
+            <app-input formControlName="largo" fxFlex placeholder="Largo"></app-input>
           </div>
 
-          <div fxFlex fxLayout="row">
-            <app-text-area placeholder="Notas"></app-text-area>
+          <div fxLayout="row">
+            <app-text-area formControlName="notas" fxFlex placeholder="Notas"></app-text-area>
           </div>
         </div>
       </mat-tab>

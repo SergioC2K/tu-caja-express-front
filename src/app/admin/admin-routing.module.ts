@@ -18,6 +18,7 @@ import { SurveysComponent } from "./surveys";
 import { AgencyComponent } from "./agency";
 import { ClientComponent } from "./client";
 import { ContainersComponent } from "./containers";
+import { PrintReportComponent } from "./print-report";
 
 const routes: Routes = [
   {
@@ -67,6 +68,10 @@ const routes: Routes = [
   {
     component: PrintRoutesComponent,
     path: "print-routes"
+  },
+  {
+    component: PrintReportComponent,
+    path: "print-report"
   },
   {
     component: ProgramComponent,

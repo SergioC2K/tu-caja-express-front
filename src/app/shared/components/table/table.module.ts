@@ -13,6 +13,10 @@ import { CountriesTableComponent } from "./countries-table";
 import { OfficeTableComponent } from "./office-table";
 import { ContainerTableComponent } from "./container-table";
 import { SearchGuideTableComponent } from "./search-guide-table";
+import { SalesTableComponent } from "./sales-table";
+import { ServicesTableComponent } from "./services-table";
+import { PrintRoutesTableComponent } from "./print-routes-table";
+import { SurveysTableComponent } from "./surveys-table";
 
 const components: any[] | Type<any> = [
   TableComponent,
@@ -23,12 +27,17 @@ const components: any[] | Type<any> = [
   CountriesTableComponent,
   OfficeTableComponent,
   ContainerTableComponent,
-  SearchGuideTableComponent
+  SearchGuideTableComponent,
+  SalesTableComponent,
+  ServicesTableComponent,
+  PrintRoutesTableComponent,
+  SurveysTableComponent,
+  SurveysTableComponent
 ];
 
 
 @NgModule({
-  declarations: [...components,],
+  declarations: [...components],
   exports: [...components],
   imports: [
     CommonModule,

@@ -1,1 +1,11 @@
-<p>print-routes works!</p>
+<div fxLayout="column" fxLayoutGap="10px">
+  <form [formGroup]="form" fxLayout="row" fxLayoutGap="10px">
+    <app-date-picker formControlName="fechaInicio" fxFlex="50" placeholder="Fecha inicio"></app-date-picker>
+    <app-date-picker formControlName="fechaFinal" fxFlex="50" placeholder="Fecha final"></app-date-picker>
+    <app-filterable-select formControlName="rutas" fxFlex="50" placeholder="Rutas"></app-filterable-select>
+    <app-button class="mt-2" title="Buscar" icon="search"></app-button>
+  </form>
+  <div class="table-container">
+    <app-print-routes-table></app-print-routes-table>
+  </div>
+</div>

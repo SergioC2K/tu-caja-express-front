@@ -1,1 +1,12 @@
-<p>date-picker works!</p>
+<mat-form-field class="input-login" [appearance]="appearance">
+  <mat-label>{{placeholder}}</mat-label>
+  <input matInput
+         [(ngModel)]="value"
+         [matDatepicker]="picker"
+         [placeholder]="placeholder"
+         [readonly]="true"
+         [errorStateMatcher]="errorStateMatcher">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+  <mat-error *ngIf="getErrorMessage">{{getErrorMessage()}}</mat-error>
+</mat-form-field>

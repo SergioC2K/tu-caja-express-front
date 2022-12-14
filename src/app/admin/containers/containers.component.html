@@ -1,11 +1,11 @@
 <div fxLayout="column" fxLayoutGap="10px">
-  <div fxLayout="row" fxLayoutGap="10px">
-    <app-input fxFlex="50" placeholder="Tipo"></app-input>
-    <app-input fxFlex="50" placeholder="Paises"></app-input>
-    <app-input fxFlex="50" placeholder="N°Contenedor"></app-input>
-    <app-button title="Buscar" icon="search"></app-button>
-    <app-button title="Crear" icon="add" (click)="openContainerDialog()"></app-button>
-  </div>
+  <form [formGroup]="form" fxLayout="row" fxLayoutGap.xs="column" fxLayoutGap="10px">
+    <app-input formControlName="tipo" fxFlex="50" placeholder="Tipo"></app-input>
+    <app-input formControlName="paises" fxFlex="50" placeholder="Paises"></app-input>
+    <app-input formControlName="nContenedor" fxFlex="50" placeholder="N°Contenedor"></app-input>
+    <app-button class="mt-2" title="Buscar" icon="search"></app-button>
+    <app-button class="mt-2" title="Crear" icon="add" (click)="openContainerDialog()"></app-button>
+  </form>
   <div class="table-container">
     <app-container-table [data]="containerList"></app-container-table>
   </div>

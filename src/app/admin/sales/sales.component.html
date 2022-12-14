@@ -1,1 +1,12 @@
-<p>sales works!</p>
+<div fxLayout="column" fxLayoutGap="10px">
+  <form [formGroup]="form" fxLayout="row" fxLayoutGap="10px">
+    <app-filterable-select formControlName="usuario" fxFlex="50" placeholder="Usuario"></app-filterable-select>
+    <app-date-picker formControlName="fechaDesde" fxFlex="50" placeholder="Fecha desde"></app-date-picker>
+    <app-date-picker formControlName="fechaHasta" fxFlex="50" placeholder="Fecha hasta"></app-date-picker>
+    <app-filterable-select formControlName="ventasPagos" fxFlex="50" placeholder="Ventas/Pagos"></app-filterable-select>
+    <app-button class="mt-2" title="Buscar" icon="search"></app-button>
+  </form>
+  <div class="table-container">
+    <app-sales-table></app-sales-table>
+  </div>
+</div>
