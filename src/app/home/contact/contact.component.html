@@ -1,1 +1,28 @@
-<p>contact works!</p>
+<div fxLayout="column">
+  <picture>
+    <img src="assets/img/pestana_contactanos/banner_contactanos.png" alt="banner_contactanos">
+    <div fxLayout="column" fxLayoutGap="20px">
+      <h1 class="centered-banner-text">Contactanos</h1>
+      <h2 class="subtitle-banner-text">¿Dudas,inquietudes y sugerencias?</h2>
+    </div>
+  </picture>
+  <div fxLayout="column" fxLayoutAlign="center center" class="contact-form">
+    <mat-card>
+      <mat-card-header fxLayoutAlign="center center">
+        <mat-card-title>¡TE ESCUCHAMOS!</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <form fxLayout="column" [formGroup]="form">
+          <app-input fxFlex placeholder="Nombre" formControlName="nombre"></app-input>
+          <app-input fxFlex placeholder="Email" formControlName="email"></app-input>
+          <app-input fxFlex placeholder="Movil" formControlName="movil"></app-input>
+          <app-text-area fxFlex placeholder="Mensaje" formControlName="mensaje"></app-text-area>
+          <app-button fxLayoutAlign="center center" type="submit" title="Enviar"></app-button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div >
+
+  </div>
+</div>

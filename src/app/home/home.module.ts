@@ -10,10 +10,11 @@ import { HomeNavbarComponent } from "./home-navbar";
 import { CoverageComponent } from "./coverage";
 import { UsComponent } from "./us";
 import { ContactComponent } from "./contact";
-import { ServicesComponent } from "./services";
+import { ServicesHomeComponent } from "./services";
 import { HomeRoutingModule } from "./home-routing.module";
 import { BeginningComponent } from "./beginning";
 import { FooterComponent } from './footer/footer.component';
+import { ComponentsModule } from "../shared";
 
 
 @NgModule({
@@ -23,7 +24,7 @@ import { FooterComponent } from './footer/footer.component';
     CoverageComponent,
     UsComponent,
     ContactComponent,
-    ServicesComponent,
+    ServicesHomeComponent,
     BeginningComponent,
     FooterComponent
   ],
@@ -34,7 +35,8 @@ import { FooterComponent } from './footer/footer.component';
     FlexModule,
     IvyCarouselModule,
     RouterModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    ComponentsModule
   ]
 })
 export class HomeModule {

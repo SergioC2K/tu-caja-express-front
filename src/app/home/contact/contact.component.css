@@ -1,0 +1,44 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.centered-banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #dde0e5;
+  font-weight: 400;
+}
+
+.subtitle-banner-text {
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #dde0e5;
+  font-weight: 400;
+}
+
+.contact-form {
+  background-image: url("src/assets/img/pestana_contactanos/fondo_contactanos.png");
+  width: 1920px;
+}
+
+:host ::ng-deep mat-card {
+  width: 500px;
+  padding: 0px !important;
+}
+
+:host ::ng-deep mat-card-header {
+  background-color: #ea4235;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px !important;
+}
+
+:host ::ng-deep mat-card-content {
+  padding: 20px;
+}
