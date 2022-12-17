@@ -52,7 +52,7 @@ export class AgencyComponent implements OnInit {
   }
 
   public deleteAgencies(): void {
-    console.log('holiiiiiiiiiiiii');
+    console.log('Estudiar si es necesario eliminar ya que los empleados estan asociados a la agencia.');
   }
 
 }
