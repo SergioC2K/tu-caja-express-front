@@ -19,7 +19,7 @@ export interface DataAgen {
 }
 
 export interface IAgency {
-    id:              number;
+    id?:             number;
     agencyName:      string;
     code:            string;
     address:         string;
@@ -36,12 +36,31 @@ export interface IAgency {
     principalAgency: boolean;
 }
 
+export interface IAgencySave {
+    id?:             number;
+    agencyName:      string;
+    code:            string;
+    address:         string;
+    municipalityId:  number;
+    zipCode:         string;
+    telephone1:      string;
+    telephone2:      string;
+    fax:             string;
+    mail:            string;
+    webPage:         string;
+    weightForm:      string;
+    logoUrl:         string;
+    status:          boolean;
+    principalAgency: boolean;
+    user:            string;
+}
+
 export interface MunicipalityID {
-    id:               number;
-    departmentId:     DepartmentID;
-    code:             string;
-    municipalityName: string;
-    status:           boolean;
+    id:                number;
+    departmentId?:     DepartmentID;
+    code?:             string;
+    municipalityName?: string;
+    status?:           boolean;
 }
 
 export interface DepartmentID {

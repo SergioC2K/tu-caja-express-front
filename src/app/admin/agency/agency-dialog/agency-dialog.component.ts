@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UnsubscribeOnDestroyDirective } from '../../../shared/directives/unsubscribe-on-destroy.directive';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
-import { SweetAlertService } from '../../../shared';
+import { SweetAlertService, AgenciesService, IAgencySave } from '../../../shared';
 
 @Component({
   selector: 'app-agency-dialog',
@@ -14,11 +14,20 @@ export class AgencyDialogComponent extends UnsubscribeOnDestroyDirective {
   constructor(
     formBuilder: FormBuilder,
     private matDialogRef: MatDialogRef<MatDialogRef<AgencyDialogComponent>>,
-    private sweetAlertService: SweetAlertService) {
+    private sweetAlertService: SweetAlertService,
+    private agenciesService: AgenciesService) {
     super(formBuilder, formBuilder.group({
       agencyName: [null, [Validators.required]],
-      leadAgency: [null, [Validators.required]],
-      routes: [null, [Validators.required]]
+      address: [null, [Validators.required]],
+      telephone1: [null, [Validators.required]],
+      telephone2: [''],
+      code: [null, [Validators.required]],
+      fax: [''],
+      mail: ['', [Validators.required, Validators.email, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
+      webPage: [''],
+      zipCode: [''],
+      principalAgency: [0],
+      user: [''],
     }));
   }
 
@@ -31,10 +40,36 @@ export class AgencyDialogComponent extends UnsubscribeOnDestroyDirective {
     if (this.form.invalid) {
       await this.sweetAlertService.showErrorMessage('Campos obligatorios');
       return;
+    } else {
+
+      let iAgencySave: IAgencySave = {
+        agencyName: this.form.value.agencyName,
+        code: this.form.value.code,
+        address: this.form.value.address,
+        municipalityId: 1,
+        zipCode: this.form.value.zipCode,
+        telephone1: this.form.value.telephone1,
+        telephone2: this.form.value.telephone2,
+        fax: this.form.value.fax,
+        mail: this.form.value.mail,
+        webPage: this.form.value.webPage,
+        weightForm: 'Ambos',
+        logoUrl: '',
+        status: true,
+        principalAgency: this.form.value.principalAgency,
+        user: this.form.value.mail
+      };
+
+      this.agenciesService.saveAgency(iAgencySave).subscribe(
+        (resp) => {
+          this.sweetAlertService.showSuccessMessage('Creado con exito');
+          this.matDialogRef.close(rawValue);
+        },
+        (err: any) => {
+          this.sweetAlertService.showErrorMessage('Error inesperado');
+        }
+      );
     }
-    const { isConfirmed } = await this.sweetAlertService.showSuccessMessage('Creado con exito');
-    if (isConfirmed) {
-      this.matDialogRef.close(rawValue);
-    }
+
   }
 }
