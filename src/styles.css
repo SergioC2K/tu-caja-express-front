@@ -1,6 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:500,700");
 @import 'ag-grid-community/styles/ag-grid.css';
 @import 'ag-grid-community/styles/ag-theme-alpine.css';
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"), url("./assets/fonts/Montserrat-Regular.otf") format('truetype');
+}
 
 html {
   height: 100%;
@@ -14,7 +18,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Montserrat' !important;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
 
 
@@ -40,4 +44,19 @@ body {
   height: 400px !important;
 }
 
+.mt-2 {
+  margin-top: 2px;
+}
 
+mat-form-field {
+  width: 100%;
+}
+
+mat-panel-title {
+  font-weight: bold;
+}
+
+.mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
