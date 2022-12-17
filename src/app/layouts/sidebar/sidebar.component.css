@@ -23,6 +23,7 @@ mat-drawer-container {
 
 .main-icon img {
   width: 28px;
+  margin-left: 10px;
 }
 
 .menu-item-title {
