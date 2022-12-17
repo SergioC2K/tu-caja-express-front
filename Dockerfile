@@ -1,3 +1,3 @@
-FROM nginx:1.23.2-alpine
-COPY docker/ngnix/default.conf /etc/nginx/conf.d/default.conf
-COPY dist/tucajaexpress-front /app
+FROM nginx:alpine
+COPY dist/tucajaexpress-front/ /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/nginx.conf
