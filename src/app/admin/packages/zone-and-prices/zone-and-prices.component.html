@@ -1,1 +1,19 @@
-<p>zone-and-prices works!</p>
+<div fxLayout="column" fxLayoutGap="10px">
+  <app-button-actions [onCreate]="true" [onDelete]="true" (createAction)="onSubmit()"
+                      (deleteAction)="deletePackage()"></app-button-actions>
+  <h1 class="zone-subtitle">
+    <mat-checkbox></mat-checkbox>
+    <mat-icon>place</mat-icon>
+    Zona
+  </h1>
+  <div fxLayout="row" fxLayoutGap="10px">
+    <mat-list role="list" *ngFor="let value of list">
+      <mat-list-item role="listitem">
+        <mat-icon>brightness_1</mat-icon>&nbsp;
+        {{value.name}}</mat-list-item>
+    </mat-list>
+  </div>
+  <div class="table-container">
+    <app-table></app-table>
+  </div>
+</div>
