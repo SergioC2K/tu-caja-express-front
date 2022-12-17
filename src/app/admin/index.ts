@@ -1,3 +1,4 @@
+export * from './agency';
 export * from './admin-profile';
 export * from './boxes';
 export * from './cellars';

@@ -1,3 +1,4 @@
+export * from "./agencies.service";
 export * from "./auth.service";
 export * from "./concepts.service";
 export * from "./countries.service";

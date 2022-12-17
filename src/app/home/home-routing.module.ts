@@ -4,12 +4,15 @@ import { ContactComponent } from "./contact";
 import { CoverageComponent } from "./coverage";
 import { UsComponent } from "./us";
 import { BeginningComponent } from "./beginning";
-import { ServicesHomeComponent } from "./services";
-
+import { HomeServicesNiComponent } from "./home-serviceni";
+import { HomeServicesPaComponent } from "./home-servicepa";
+import { HomeServicesPpComponent } from "./home-servicepp";
 
 const routes: Routes = [
   { path: "beginning", component: BeginningComponent },
-  { path: "services", component: ServicesHomeComponent },
+  { path: "hserviceni", component: HomeServicesNiComponent },
+  { path: "hservicepa", component: HomeServicesPaComponent },
+  { path: "hservicepp", component: HomeServicesPpComponent},
   { path: "contact", component: ContactComponent },
   { path: "coverage", component: CoverageComponent },
   { path: "us", component: UsComponent }

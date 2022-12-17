@@ -1,85 +1,52 @@
-import {Component} from '@angular/core';
-import {ColDef} from 'ag-grid-community';
-import {TableButtonComponent} from '../table-button/table-button.component';
+import { Component } from "@angular/core";
+import { TableComponent } from "../table.component";
+import { ColDef } from "ag-grid-community";
+import { TableButtonComponent } from "../table-button/table-button.component";
 
 @Component({
-  selector: 'app-agency-table',
-  templateUrl: './agency-table.component.html',
-  styleUrls: ['./agency-table.component.css']
+  selector: "app-agency-table",
+  templateUrl: "./agency-table.component.html",
+  styleUrls: ["./agency-table.component.css"]
 })
-export class AgencyTableComponent {
+export class AgencyTableComponent extends TableComponent {
 
   constructor() {
+    super();
   }
 
-  public frameworkComponents: {} = {
-    btnCellRenderer: TableButtonComponent,
+  public override frameworkComponents: {} = {
+    btnCellRenderer: TableButtonComponent
   };
 
-  public columnDefs: ColDef[] = [
+  public override columnDefs: ColDef[] = [
     {
-      field: 'agencia',
-      headerName: 'Agencia'
-    },
-    {
-      field: '',
-      headerName: '',
-      cellRenderer: 'btnCellRenderer',
+      field: "",
+      headerName: "Editar",
+      cellRenderer: "btnCellRenderer",
       cellRendererParams: {
-        icon: 'edit',
-        message: 'Editar',
-        title: 'Editar información',
+        icon: "edit",
+        message: "Editar",
         selectRow: async (data: any) => {
-          return data
+          return data;
         }
-      },
+      }
     },
     {
-      field: '',
-      headerName: '',
-      cellRenderer: 'btnCellRenderer',
-      cellRendererParams: {
-        icon: 'edit',
-        message: 'Editar tarifa',
-        title: 'Editar tarifa',
-        selectRow: async (data: any) => {
-          return data
-        }
-      },
+      field: "agencyName",
+      headerName: "Agencia"
     },
     {
-      field: '',
-      headerName: '',
-      cellRenderer: 'btnCellRenderer',
-      cellRendererParams: {
-        icon: 'edit',
-        message: 'Modificar usuario',
-        title: 'Modificar usuario',
-        selectRow: async (data: any) => {
-          return data
-        }
-      },
+      field: "address",
+      headerName: "Direcci\u00F3n"
     },
     {
-      field: '',
-      headerName: '',
-      cellRenderer: 'btnCellRenderer',
-      cellRendererParams: {
-        icon: 'edit',
-        message: 'clonar agencia',
-        title: 'Clonar',
-        selectRow: async (data: any) => {
-          return data
-        }
-      },
+      field: "telephone1",
+      headerName: "Tel\u00E9fono"
     },
+    {
+      field: "webPage",
+      headerName: "P\u00E1gina Web"
+    }
+  ];
 
-  ]
-  data = [{
-    agencia: '2'
-  }];
-
-  createAgency() {
-
-  }
 }

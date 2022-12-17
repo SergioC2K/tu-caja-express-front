@@ -8,7 +8,7 @@ img {
   color: #ea4235;
   position: absolute;
   top: 41%;
-  left: 34%;
+  left: 37%;
   transform: translate(-50%, -50%);
   font-weight: bold;
   font-style: italic;
@@ -19,7 +19,7 @@ img {
   font-size: 300%;
   position: absolute;
   top: 48%;
-  left: 40%;
+  left: 43%;
   transform: translate(-50%, -50%);
   color: #dde0e5;
   font-weight: bold;
@@ -40,7 +40,7 @@ img {
   margin-left: 110px;
   margin-bottom: 60px;
   border-radius: 25px;
-  background-image: url("/assets/img/pestana_nosotros/imagen_nosotros_1.png");
+  background-image: url("/assets/img/pestana_serviciopp/imagen_serviciopp_1.png");
   background-repeat: no-repeat;
   background-size: 510px 629px;
   background-position: center;
@@ -53,8 +53,18 @@ img {
   margin-bottom: 60px;
 }
 
+.imagen2-container {
+  width: 200px;
+  height: 200px;
+  margin-top: 50px;
+  margin-left: 195px;
+  background-image: url("/assets/img/logos/servicio1.png");
+  background-repeat: no-repeat;
+  background-size: 200px 200px;
+}
+
 .contenido-texto-container {
-  margin-top: 60px;
+  margin-top: 20px;
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -64,39 +74,29 @@ img {
   text-align: justify
 }
 
-.valores-title {
-  font-size: 38px;
-  font-style: italic;
-  align-items: center;
-  display: flex;
-  height: 60px;
-  justify-content: center;
-  background-color: var(--main-red);
-  color: white;
-  transform: scaleX(1.3);
-  font-weight: bold;
-}
-
-.valores-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  background-color: var(--main-red);
-  width: 100%;
-}
-
-.valores_iconos {
-  background-size: 120px 120px;
-  margin-left: 240px;
-}
-
-.valores-icono-titulo {
-  color: white;
-  font-weight: bold;
+.card-info-title {
   font-size: 25px;
-  margin-left: 215px;
-  margin-top: 10px;
-  margin-right: 13px;
-  height: 60px;
-  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.call-info {
+  background-color: var(--main-red);
+  color: white;
+  width: 100%;
+  justify-content: center;
+}
+
+.call-info mat-icon {
+  height: 40px;
+  width: 50px;
+  font-size: 40px;
+}
+
+.map-button-container {
+  width: 100%;
+  color: white;
+  font-weight: 400;
+  text-align: center;
+  font-size: 35px;
+  padding: 25px;
 }

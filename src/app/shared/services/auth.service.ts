@@ -9,13 +9,9 @@ import { environment } from "../../../environments/environment";
 })
 export class AuthService {
 
-  private apiUrl: string = `${environment.tuCajaExpressApi}`;
+  private apiUrl: string = `${environment.tuCajaExpressApi}/auth`;
 
   constructor(private http: HttpClient) {
-  }
-
-  getAlgo(): any {
-    return this.http.get('https://jsonplaceholder.typicode.com/todos/1').toPromise();
   }
 
   public loginUser(request: ILoginRequest): Observable<ILoginResponse> {
