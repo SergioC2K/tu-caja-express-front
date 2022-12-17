@@ -1,4 +1,6 @@
 export const environment = {
   production: true,
-  tuCajaExpressApi: "/tucajaexpress-api"
+  tuCajaExpressApi: ":8080/tucajaexpress-api"
 };
+
+
