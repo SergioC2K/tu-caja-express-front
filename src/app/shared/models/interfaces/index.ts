@@ -1,3 +1,4 @@
+export * from './agencies';
 export * from './auth';
 export * from './object-data.interface';
 export * from './concepts';

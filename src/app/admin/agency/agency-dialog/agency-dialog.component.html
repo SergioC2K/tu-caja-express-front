@@ -1,8 +1,57 @@
-<div fxLayout="column">
-  <app-dialog-toolbar icon="add" title="Crear agencia"></app-dialog-toolbar>
-  <form class="dialog-form-container" [formGroup]="form" fxLayout="column">
-    <app-filterable-select placeholder="Funciona"></app-filterable-select>
-    <app-dialog-actions (cancelAction)="closeDialog()"></app-dialog-actions>
+<div fxLayout="column" fxLayoutGap="10px">
+  <app-dialog-toolbar icon="person_add" title="Crear / Editar agencia"></app-dialog-toolbar>
+  <form [formGroup]="form" class="dialog-form-container" fxLayout="column">
+
+    <div fxLayout="row" style="height: 60px">
+      <div fxFlex="50">
+        <app-input fxFlex formControlName="agencyName" placeholder="Nombre Agencia"></app-input>
+      </div>
+      <div fxFlex="50" fxFlexOffset="2">
+        <app-input fxFlex formControlName="address" placeholder="Direcci&oacute;n"></app-input>
+      </div>
+    </div>
+
+    <div fxLayout="row" style="height: 60px">
+      <div fxFlex="50">
+        <app-input fxFlex formControlName="telephone1" placeholder="Tel&eacute;fono 1"></app-input>
+      </div>
+      <div fxFlex="50" fxFlexOffset="2">
+        <app-input fxFlex formControlName="telephone2" placeholder="Tel&eacute;fono 2"></app-input>
+      </div>
+    </div>
+
+    <div fxLayout="row" style="height: 60px">
+      <div fxFlex="50">
+        <app-input fxFlex formControlName="code" placeholder="C&oacute;digo"></app-input>
+      </div>
+      <div fxFlex="50" fxFlexOffset="2">
+        <app-input fxFlex formControlName="fax" placeholder="Fax"></app-input>
+      </div>
+    </div>
+
+    <div fxLayout="row" style="height: 60px">
+      <div fxFlex="50">
+        <app-input fxFlex formControlName="mail" placeholder="Correo Electr&oacute;nico"></app-input>
+      </div>
+      <div fxFlex="50" fxFlexOffset="2">
+        <app-input fxFlex formControlName="webPage" placeholder="P&aacute;gina Web"></app-input>
+      </div>
+    </div>
+
+    <div fxLayout="row" style="height: 60px">
+      <div fxFlex="50">
+        <app-input fxFlex formControlName="zipCode" placeholder="C&oacute;digo zip"></app-input>
+      </div>
+      <div fxFlex="50" fxFlexOffset="2">
+
+      </div>
+    </div>
+
+    <div fxLayout="row" style="height: 60px">
+      <div fxFlex="100" fxLayoutAlign="center center">
+        <app-dialog-actions (saveAction)="saveAgency()" (cancelAction)="closeDialog()"></app-dialog-actions>
+      </div>
+    </div>
+
   </form>
 </div>
-

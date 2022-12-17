@@ -4,7 +4,6 @@
 
 export const environment = {
   production: false,
-  // tuCajaExpressApi: 'http://desarrollo-arte-in-network.com.co:8080/tucajaexpress-api'
   tuCajaExpressApi: 'http://localhost:8080/tucajaexpress-api'
 };
 

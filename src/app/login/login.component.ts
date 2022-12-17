@@ -86,7 +86,7 @@ export class LoginComponent implements OnInit {
             username: response.data.email,
             password: request.password
           });
-          await this.onSubmit();
+          //await this.onSubmit();
           this.form.enable();
           this.loading = false;
         }
