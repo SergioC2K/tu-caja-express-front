@@ -1,8 +1,8 @@
-import {Component, OnInit} from '@angular/core';
-import {MatDialog} from '@angular/material/dialog';
+import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { HttpErrorResponse } from '@angular/common/http';
-import {AgencyDialogComponent} from './agency-dialog';
-import {AgenciesService, IResAgencies, IAgency} from "../../shared";
+import { AgencyDialogComponent } from './agency-dialog';
+import { AgenciesService, IResAgencies, IAgency } from "../../shared";
 
 @Component({
   selector: 'app-agency',
@@ -14,7 +14,7 @@ export class AgencyComponent implements OnInit {
   agencyList: Array<IAgency> = [];
 
   constructor(private dialog: MatDialog,
-              private agenciesService: AgenciesService) {
+    private agenciesService: AgenciesService) {
   }
 
   ngOnInit(): void {
@@ -36,11 +36,7 @@ export class AgencyComponent implements OnInit {
       }
     );
   }
-
-  public saveAgency(): void {
-    console.log('holiiiiiiiiiiiii');
-  }
-
+  
   public createAgency(): void {
     const dialogRef = this.dialog.open(AgencyDialogComponent, {
       width: '900px',
