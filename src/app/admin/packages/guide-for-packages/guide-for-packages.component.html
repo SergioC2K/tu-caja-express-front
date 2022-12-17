@@ -1,0 +1,8 @@
+<div fxLayout="column" fxLayoutGap="10px">
+  <app-button-actions [onCreate]="true" [onDelete]="true" (createAction)="onSubmit()" (deleteAction)="deletePackage()"></app-button-actions>
+  <div class="table-container">
+    <app-packages-table></app-packages-table>
+  </div>
+  <app-button-actions [onCreate]="true" [onDelete]="true" (createAction)="onSubmit()" (deleteAction)="deletePackage()" ></app-button-actions>
+</div>
+

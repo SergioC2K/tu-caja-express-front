@@ -1,0 +1,21 @@
+:host ::ng-deep img {
+  width: 120px;
+}
+
+:host ::ng-deep mat-card-actions a {
+  color: var(--main-red);
+  font-size: 15px;
+}
+
+:host ::ng-deep mat-card-content {
+  padding: 10px 50px;
+}
+
+.package-subtitle {
+  width: 100%;
+  color: white;
+  background-color: #ea4235;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}

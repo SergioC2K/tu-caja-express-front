@@ -17,6 +17,7 @@ import { SalesTableComponent } from "./sales-table";
 import { ServicesTableComponent } from "./services-table";
 import { PrintRoutesTableComponent } from "./print-routes-table";
 import { SurveysTableComponent } from "./surveys-table";
+import { PackagesTableComponent } from "./packages-table";
 
 const components: any[] | Type<any> = [
   TableComponent,
@@ -32,7 +33,8 @@ const components: any[] | Type<any> = [
   ServicesTableComponent,
   PrintRoutesTableComponent,
   SurveysTableComponent,
-  SurveysTableComponent
+  SurveysTableComponent,
+  PackagesTableComponent
 ];
 
 

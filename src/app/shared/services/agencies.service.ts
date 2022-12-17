@@ -3,7 +3,7 @@ import { Observable, throwError } from 'rxjs';
 import { catchError, retry, map } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { IResAgencies } from '../models/interfaces/agencies';
+import { IResAgencies } from "../models";
 
 @Injectable({
     providedIn: 'root'
@@ -30,23 +30,23 @@ export class AgenciesService {
     /*public saveAgency(request: ICreateAgenciesRequest): Observable<IAgenciesDto> {
       return this.http.post<IAgenciesDto>(`${this.apiUrl}/save`, request);
     }
-  
+
     public updateAgency(request: ICreateAgenciesRequest): Observable<IAgenciesDto> {
       return this.http.put<IAgenciesDto>(`${this.apiUrl}/update`, request);
     }
-  
+
     public searchAgencyById(id: string): Observable<IAgenciesDto> {
       return this.http.get<IAgenciesDto>(`${this.apiUrl}/search/byId?id=${id}`);
     }
-  
+
     public searchAgencyByStatus(status: string): Observable<IAgenciesDto> {
       return this.http.get<IAgenciesDto>(`${this.apiUrl}/search/byStatus?id=${status}`);
     }
-  
+
     public searchAgencyByCode(code: string): Observable<IAgenciesDto> {
       return this.http.get<IAgenciesDto>(`${this.apiUrl}/search/byCode?id=${code}`);
     }
-  
+
     public deleteAgency(id: string, user: string): Observable<string> {
       return this.http.delete<string>(`${this.apiUrl}/remove?id=${id}&user=${user}`);
     }*/
