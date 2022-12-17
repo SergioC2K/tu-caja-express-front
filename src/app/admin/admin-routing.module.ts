@@ -19,6 +19,10 @@ import { AgencyComponent } from "./agency";
 import { ClientComponent } from "./client";
 import { ContainersComponent } from "./containers";
 import { PrintReportComponent } from "./print-report";
+import { ZoneAndPricesComponent } from "./packages/zone-and-prices";
+import { SpecialGroupsComponent } from "./packages/special-groups";
+import { GuideForWeightComponent } from "./packages/guide-for-weight";
+import { GuideForPackagesComponent } from "./packages/guide-for-packages";
 
 const routes: Routes = [
   {
@@ -64,6 +68,22 @@ const routes: Routes = [
   {
     component: PackagesComponent,
     path: "packages"
+  },
+  {
+    component: GuideForPackagesComponent,
+    path: "guide-for-packages"
+  },
+  {
+    component: GuideForWeightComponent,
+    path: "guide-for-weight"
+  },
+  {
+    component: SpecialGroupsComponent,
+    path: "special-groups"
+  },
+  {
+    component: ZoneAndPricesComponent,
+    path: "zone-and-prices"
   },
   {
     component: PrintRoutesComponent,

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { OfficeComponent } from "./office.component";
-import { OfficeDialogComponent } from './office-dialog/office-dialog.component';
+import { OfficeDialogComponent } from "./office-dialog";
 import { ComponentsModule } from "../../shared";
 
 

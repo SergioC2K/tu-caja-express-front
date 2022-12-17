@@ -17,6 +17,7 @@ import { SalesModule } from "./sales/sales.module";
 import { ServicesModule } from "./services/services.module";
 import { PrintRoutesModule } from "./print-routes";
 import { SurveysModule } from "./surveys/surveys.module";
+import { PackagesModule } from "./packages";
 
 @NgModule({
   declarations: [],
@@ -40,7 +41,8 @@ import { SurveysModule } from "./surveys/surveys.module";
     ServicesModule,
     PrintRoutesModule,
     SurveysModule,
-    SearchGuideModule
+    SearchGuideModule,
+    PackagesModule
   ]
 })
 export class AdminModule {

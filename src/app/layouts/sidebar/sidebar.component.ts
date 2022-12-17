@@ -21,10 +21,9 @@ export class SidebarComponent implements OnInit {
   }
 
   public getRoute(value: { url: string, sectionName: string }): void {
-    const mapUrl = this.navigationList;
-    const filter = mapUrl.filter(item => item.sectionName === value.sectionName)[0];
-    const currentPage = filter.items.filter((item: any) => item.url === value.url)[0];
-    this.toolbarImage = currentPage?.icon;
+    const urlList = this.navigationList[0].items.concat(this.navigationList[1].items);
+    const currentPage = urlList.filter((item: any) => item.url === value.url)[0];
+    this.toolbarImage = currentPage.icon;
     this.toolbarTitle = currentPage?.title;
   }
 }
