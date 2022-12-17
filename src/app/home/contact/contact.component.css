@@ -23,7 +23,8 @@ img {
 
 .contact-form {
   background-image: url("src/assets/img/pestana_contactanos/fondo_contactanos.png");
-  width: 1920px;
+  padding: 10px;
+
 }
 
 :host ::ng-deep mat-card {
