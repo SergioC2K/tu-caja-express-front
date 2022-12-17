@@ -1,6 +1,5 @@
 export const environment = {
   production: true,
-  tuCajaExpressApi: ":8080/tucajaexpress-api"
+  tuCajaExpressApi: "http://desarrollo-arte-in-network.com.co/:8080/"
 };
-
 
