@@ -58,7 +58,7 @@ export class LoginComponent implements OnInit {
         this.authService.setToken(response.data.token);
         const userResponse = await this.userService.getUserInfo(response.data.id);
         this.authService.setUserInfo(userResponse?.data);
-        await this.router.navigate(["/admin"]);
+        await this.router.navigate(["/admin/profile"]);
       }
       this.form.enable();
       this.loading = false;
@@ -79,18 +79,18 @@ export class LoginComponent implements OnInit {
       this.form.disable();
       const request: ICreateUserRequest = { ...this.userForm.getRawValue(), role: ["user"] };
       const response = await this.authService.createUser(request).toPromise();
+      this.loading = false;
       if (response?.status === 201) {
         const { isConfirmed } = await this.sweetAlertService.showSuccessMessage("Usuario creado con exito");
         if (isConfirmed) {
           this.form.patchValue({
-            username: response.data.email,
+            email: request.email,
             password: request.password
           });
-          //await this.onSubmit();
-          this.form.enable();
-          this.loading = false;
+          await this.onSubmit();
         }
       }
+      this.form.enable();
     } catch (e) {
       this.form.enable();
       this.loading = false;
