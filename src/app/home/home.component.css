@@ -5,3 +5,17 @@
 .home-content {
   margin-top: 80px;
 }
+
+.social-media {
+  width: 50px;
+  position: fixed;
+  z-index: 21;
+  top: 30%;
+  padding: 10px;
+
+}
+
+.social-media-box img {
+  cursor: pointer;
+  width: 100%;
+}
