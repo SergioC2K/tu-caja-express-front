@@ -12,7 +12,7 @@
             <div class="imagen2-container"></div>
             <div class="contenido-texto-container">
                 <span class="card-info-title">Con el servicio de puerta a puerta...</span>
-                <br /><br />          
+                <br /><br />
                 <p>Usted recibe nuestras cajas vacias y luego se las recogemos llenas sin costo adicional, sabemos que
                     lo importante es evitar que usted pierda tiempo, por eso hemos invertido para mejorar nuestro
                     servicio.</p>
@@ -24,9 +24,10 @@
         </div>
     </div>
     <div class="call-info map-button-container">
-        Si tienes dudas, <b>&iexcl; Escr&iacute;benos o ll&aacute;manos &#33;</b>
-        <br />
-        <br />
-        Cont&aacute;ctanos <mat-icon>phone</mat-icon>
+        Si tienes dudas, <b>&iexcl; Escr&iacute;benos o ll&aacute;manos &#33;</b><br />
+        <button type="button" mat-raised-button (click)="irWhatsapp(); $event.preventDefault()">
+            <img class="img-whatsapp" src="assets/img/logos/whatsapp-white.png" />
+            CONT&Aacute;CTANOS
+        </button>
     </div>
 </div>

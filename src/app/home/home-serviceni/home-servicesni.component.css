@@ -100,3 +100,20 @@ img {
   font-size: 35px;
   padding: 25px;
 }
+
+button {
+  width: 300px;
+  height: 55px;
+  font: 700 1em Tahoma, Arial, Verdana, sans-serif;
+  color: #fff;
+  background-color: black;
+  border-radius: 60px;
+  font-size: 28px;
+  margin-top: 60px;
+  cursor: pointer;
+}
+
+.img-whatsapp {
+  width: 40px;
+  height: 40px;
+}

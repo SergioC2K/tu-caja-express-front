@@ -24,7 +24,9 @@
     <div class="call-info map-button-container">
         Escr&iacute;benos para averiguar su <b>oficina m&aacute;s cercana.</b>
         <br />
-        <br />
-        Cont&aacute;ctanos <mat-icon>phone</mat-icon>
+        <button type="button" mat-raised-button (click)="irWhatsapp(); $event.preventDefault()">
+            <img class="img-whatsapp" src="assets/img/logos/whatsapp-white.png" />
+            CONT&Aacute;CTANOS
+        </button>
     </div>
 </div>
