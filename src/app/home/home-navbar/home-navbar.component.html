@@ -28,17 +28,19 @@
     <div class="toolbar-tab">
       <a [routerLink]="['/home/coverage']" class="toolbar-tab-title">Cobertura</a>
     </div>
+    
     <form class="toolbar-tab-image" fxLayout="column" fxLayoutAlign="center center">
-      <img class="toolbar-image" src="assets/img/logos/logo-tu-caja-express2.png" alt="Logo tu caja express">
+      <div class="toolbar-image"></div>
       <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
-        <input class="tracking-guide-input" type="text" required autocomplete="off" placeholder="Sigue tu envío">
+        <input class="tracking-guide-input" type="text" required autocomplete="off" placeholder="      Ingresa el # de gu&iacute;a">
         <div fxFlex fxLayoutAlign="end center">
           <button mat-mini-fab class="search-button">
-            <mat-icon>search</mat-icon>
+            <mat-icon class="search-icon">search</mat-icon>
           </button>
         </div>
       </div>
     </form>
+
     <div class="toolbar-tab">
       <a [routerLink]="['/home/us']" class="toolbar-tab-title">Nosotros</a>
     </div>
@@ -57,4 +59,6 @@
       </mat-menu>
     </div>
   </div>
+
+
 </nav>

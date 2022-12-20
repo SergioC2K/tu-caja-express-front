@@ -12,10 +12,11 @@ const routes: Routes = [
   { path: "beginning", component: BeginningComponent },
   { path: "hserviceni", component: HomeServicesNiComponent },
   { path: "hservicepa", component: HomeServicesPaComponent },
-  { path: "hservicepp", component: HomeServicesPpComponent},
+  { path: "hservicepp", component: HomeServicesPpComponent },
   { path: "contact", component: ContactComponent },
   { path: "coverage", component: CoverageComponent },
-  { path: "us", component: UsComponent }
+  { path: "us", component: UsComponent },
+  { path: "**", redirectTo: "beginning", pathMatch: "full" },
 ];
 
 @NgModule({
