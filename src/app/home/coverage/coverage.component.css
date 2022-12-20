@@ -1,0 +1,53 @@
+@media (device-width: 1366px) {
+  .centered-banner-title {
+    font-size: 50px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    font-weight: bold;
+  }
+}
+
+
+@media (device-width: 1920px) {
+  .centered-banner-title {
+    font-size: 70px;
+    color: white;
+    position: absolute;
+    top: 30%;
+    font-weight: bold;
+  }
+}
+
+.locations-container {
+  padding: 10px 200px;
+}
+
+.locations-container h1 {
+  font-weight: bold;
+}
+
+.locations-container li {
+  list-style: none;
+  color: #ea4235;
+}
+
+.coverage-footer {
+  background-color: #ea4235;
+  padding: 20px;
+  color: white;
+}
+
+.whatsapp-container {
+  background-color: #1d1d1b;
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.whatsapp-container img {
+  width: 25px;
+  background-size: 0;
+  background-color: white;
+}
