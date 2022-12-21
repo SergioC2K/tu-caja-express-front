@@ -3,7 +3,7 @@
     font-size: 50px;
     color: white;
     position: absolute;
-    top: 50%;
+    top: 40%;
     font-weight: bold;
   }
 }
@@ -17,6 +17,10 @@
     top: 30%;
     font-weight: bold;
   }
+}
+
+picture img {
+  width: 100%;
 }
 
 .locations-container {
@@ -50,4 +54,25 @@
   width: 25px;
   background-size: 0;
   background-color: white;
+}
+
+button {
+  width: 300px;
+  height: 55px;
+  font: 700 1em Tahoma, Arial, Verdana, sans-serif;
+  color: #fff;
+  background-color: black;
+  border-radius: 60px;
+  font-size: 28px;
+  margin-top: 60px;
+  cursor: pointer;
+}
+
+.img-whatsapp {
+  width: 40px;
+  height: 40px;
+}
+
+.map-container img {
+  width: 50%;
 }

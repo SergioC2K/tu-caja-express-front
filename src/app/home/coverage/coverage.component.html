@@ -7,8 +7,8 @@
       </div>
     </picture>
   </div>
-  <div fxFlex fxLayout="row" fxLayoutAlign="center">
-    <div fxFlex="30" class="locations-container">
+  <div fxFlex fxLayout="row">
+    <div class="locations-container">
       <h1>Tu caja express</h1>
       <ul>
         <li>
@@ -45,17 +45,15 @@
         </li>
       </ul>
     </div>
-    <div fxFlex>
-      <img src="assets/img/banners/mapa-mockup.png" alt="mapa-mockup.png">
+    <div class="map-container">
+      <img fxFlex src="assets/img/banners/mapa-mockup.png" alt="mapa-mockup.png">
     </div>
   </div>
   <div fxFlex fxLayout="column" class="coverage-footer" fxLayoutAlign="center center">
     <h1>¡Escribenos <span>para ubircarle nuestra oficina mas cercana!</span></h1>
-    <div fxLayout="row" fxLayoutGap="10px" class="whatsapp-container">
-      <picture>
-        <img src="assets/img/logos/whatsapp.png" alt="whatsapp.png">
-      </picture>
-      <span>Contáctanos</span>
-    </div>
+    <button type="button" mat-raised-button (click)="openWhatsAppLink(); $event.preventDefault()">
+      <img class="img-whatsapp" src="assets/img/logos/whatsapp-white.png" alt="whatsapp-white.png" />
+      CONT&Aacute;CTANOS
+    </button>
   </div>
 </div>
